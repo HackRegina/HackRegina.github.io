@@ -46,83 +46,50 @@
     </div>
   </div>
 </div>
-<div class="container">
-  <div class="row my-5">
-    <div class="col text-center mx-auto">
-      <button type="button" name="button" class="btn btn-primary btn-lg">Browse</button>
-    </div>
-  </div>
+<div class="container" *ngIf="sponsors">
   <h2 class="text-center text-uppercase">Our Amazing Sponsors</h2>
   <h3 class="text-center text-uppercase">Platinum Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'PLATINUM'})">
+      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
+      {{sponsor.description}}
+    </div>
+    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'PLATINUM'}).length === 0">
+       There are currently no Platinum sponsors.
     </div>
   </div>
   <h3 class="text-center text-uppercase">Gold Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'GOLD'})">
+      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
+      {{sponsor.description}}
     </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'GOLD'}).length === 0">
+       There are currently no Gold sponsors.
     </div>
   </div>
   <h3 class="text-center text-uppercase">Silver Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'SILVER'})">
+      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
+      {{sponsor.description}}
     </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'SILVER'}).length === 0">
+       There are currently no Silver sponsors.
     </div>
   </div>
   <h3 class="text-center text-uppercase">Bronze Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'BROZE'})">
+      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
+      {{sponsor.description}}
     </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-    </div>
-    <div class="col-4 my-5 mx-auto">
-      <h5 class="card-title text-uppercase">Sponsor</h5>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'BROZE'}).length === 0">
+       There are currently no Bronze sponsors.
     </div>
   </div>
   <h2 class="text-center text-uppercase">Meet the Team</h2>
