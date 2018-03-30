@@ -148,18 +148,18 @@
       <p>Regina, SK S4S 6W4</p>
     </div>
     <div class="col-md-6 order-md-1">
-      <form class="needs-validation" novalidate="">
+      <form class="needs-validation" action="https://formspree.io/hackregina@crossman.io" method="POST">
         <div class="row">
           <div class="col-md-6 mb-3">
             <label for="name">Full name</label>
-            <input type="text" class="form-control" id="name" placeholder="" value="" required="">
+            <input type="text" class="form-control" id="name" name="name" placeholder="" value="" required="">
             <div class="invalid-feedback">
               Valid name is required.
             </div>
           </div>
           <div class="col-md-6 mb-3">
             <label for="email">Email</label>
-            <input type="email" class="form-control" id="email" placeholder="">
+            <input type="email" class="form-control" id="email" name="_replyto" placeholder="">
             <div class="invalid-feedback">
               Please enter a valid email address
             </div>
@@ -168,7 +168,7 @@
 
         <div class="mb-3">
           <label for="subject">Subject</label>
-          <input type="text" class="form-control" id="subject" placeholder="" required="">
+          <input type="text" class="form-control" id="subject" name="_subject" placeholder="" required="">
           <div class="invalid-feedback" style="width: 100%;">
             Your subject is required.
           </div>
@@ -176,7 +176,7 @@
 
         <div class="mb-3">
           <label for="body">Message</label>
-          <textarea class="form-control" id="body" rows="3"></textarea>
+          <textarea class="form-control" id="body" name="body" rows="3"></textarea>
         </div>
 
         <button class="btn btn-primary btn-lg mt-3" type="submit">Send it</button>
