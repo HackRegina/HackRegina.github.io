@@ -1,6 +1,6 @@
 import { AppPage } from './app.po';
 
-describe('hack-regina-website App', () => {
+describe('website App', () => {
   let page: AppPage;
 
   beforeEach(() => {
