@@ -8,21 +8,21 @@
   <div class="row mb-5">
     <div class="col mx-5">
       <div class="card-deck card-overlap">
-        <div class="card text-center">
+        <div class="card text-center" data-aos="fade-up-right">
           <div class="card-body">
             <i class="far fa-comments fa-3x m-2"></i>
             <h5 class="card-title text-uppercase">Communication Network</h5>
             <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
           </div>
         </div>
-        <div class="card text-center">
+        <div class="card text-center" data-aos="fade-up-up">
           <div class="card-body">
             <i class="far fa-hands-heart fa-3x m-2"></i>
             <h5 class="card-title text-uppercase">Community Grown</h5>
             <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
           </div>
         </div>
-        <div class="card text-center">
+        <div class="card text-center" data-aos="fade-up-left">
           <div class="card-body">
             <i class="far fa-building fa-3x m-2"></i>
             <h5 class="card-title text-uppercase">Developing Trade Skills</h5>
@@ -50,30 +50,30 @@
   <h2 class="text-center text-uppercase">Our Amazing Sponsors</h2>
   <h3 class="text-center text-uppercase">Platinum Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'PLATINUM'})">
-      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'PLATINUM'}); index as i">
+      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
       <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
       {{sponsor.description}}
     </div>
-    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'PLATINUM'}).length === 0">
+    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'PLATINUM'}).length === 0; index as i">
        There are currently no Platinum sponsors.
     </div>
   </div>
   <h3 class="text-center text-uppercase">Gold Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'GOLD'})">
-      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'GOLD'}); index as i">
+      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
       <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
       {{sponsor.description}}
     </div>
-    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'GOLD'}).length === 0">
+    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'GOLD'}).length === 0; index as i">
        There are currently no Gold sponsors.
     </div>
   </div>
   <h3 class="text-center text-uppercase">Silver Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'SILVER'})">
-      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'SILVER'}); index as i">
+      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
       <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
       {{sponsor.description}}
     </div>
@@ -83,8 +83,8 @@
   </div>
   <h3 class="text-center text-uppercase">Bronze Sponsors</h3>
   <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" *ngFor="let sponsor of getFilteredSponsors({tier: 'BROZE'})">
-      <img class="card-img-top" [src]="sponsor.img" alt="Card image cap">
+    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'BROZE'})">
+      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
       <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
       {{sponsor.description}}
     </div>
