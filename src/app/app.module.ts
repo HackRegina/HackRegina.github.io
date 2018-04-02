@@ -10,7 +10,6 @@ import { ServicesComponent } from './services/services.component'
 import { StoryComponent } from './story/story.component'
 import { ContactComponent } from './contact/contact.component'
 import { SponsorsPageComponent } from './sponsorsPage/sponsorsPage.component'
-import { SponsorsService } from './sponsorsPage/sponsors.service'
 import { ContentfulService } from './contentful.service'
 import { SponsorsComponent } from './sponsors/sponsors.component'
 import { SponsorComponent } from './sponsor/sponsor.component'
@@ -34,7 +33,6 @@ import { SponsorshipLevelPipe } from './sponsorship-level.pipe'
     AppRoutingModule
   ],
   providers: [
-    SponsorsService,
     ContentfulService
   ],
   bootstrap: [AppComponent]
