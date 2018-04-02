@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
-import { Sponsor } from '../sponsors/sponsor'
-import { SponsorsService } from '../sponsors/sponsors.service'
+import { Sponsor } from '../sponsorsPage/sponsor'
+import { SponsorsService } from '../sponsorsPage/sponsors.service'
 
 @Component({
   selector: 'app-home',
