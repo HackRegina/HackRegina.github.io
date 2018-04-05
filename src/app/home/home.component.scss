@@ -1,17 +1,20 @@
-.bg-stock-img1 {
+.bg-stock-img {
   background-size: auto 150%;
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-position: top center;
+}
+
+.bg-stock-img1 {
   background-image: url(/assets/imgs/bg.png);
 }
 
 .bg-stock-img2 {
-  background-size: auto 150%;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
-  background-position: top center;
   background-image: url(/assets/imgs/bg2.png);
+}
+
+.bg-stock-img3 {
+  background-image: url(/assets/imgs/bg3.png);
 }
 
 .card-overlap {
