@@ -1,15 +1,26 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
+import { ContentfulService } from '../contentful.service'
+import { Observable } from 'rxjs/Observable'
 
 @Component({
   selector: 'app-sponsors',
   templateUrl: './sponsors.component.html',
-  styleUrls: ['./sponsors.component.css']
+  styleUrls: ['./sponsors.component.scss']
 })
 export class SponsorsComponent implements OnInit {
 
-  constructor() { }
+  sponsorshipLevels
+  sponsors
 
-  ngOnInit() {
+  constructor (private contentful: ContentfulService) { }
+
+  ngOnInit () {
+    this.contentful.getSponsors().subscribe(sponsors => this.sponsors = sponsors)
+
+    this.contentful.getSponsorshipLevels().subscribe(levels => {
+      this.sponsorshipLevels = levels.sort((a, b) => a.fields.order - b.fields.order)
+
+    })
   }
 
 }

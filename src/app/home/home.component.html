@@ -10,23 +10,25 @@
       <div class="card-deck card-overlap">
         <div class="card text-center" data-aos="fade-up-right">
           <div class="card-body">
-            <i class="far fa-comments fa-3x m-2"></i>
-            <h5 class="card-title text-uppercase">Communication Network</h5>
-            <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+            <i class="fas fa-calendar fa-3x m-2"></i>
+            <h5 class="card-title text-uppercase">Events</h5>
+            <p class="card-text">Code together nights, hackathons and educational talks from tech leaders in Regina.</p>
           </div>
         </div>
         <div class="card text-center" data-aos="fade-up-up">
           <div class="card-body">
-            <i class="far fa-hands-heart fa-3x m-2"></i>
-            <h5 class="card-title text-uppercase">Community Grown</h5>
-            <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+            <i class="fab fa-slack fa-3x m-2"></i>
+            <h5 class="card-title text-uppercase">Slack</h5>
+            <p class="card-text">Talk tech, meet people, get help, learn something new. Join the discussion on Slack
+              below!</p>
           </div>
         </div>
         <div class="card text-center" data-aos="fade-up-left">
           <div class="card-body">
-            <i class="far fa-building fa-3x m-2"></i>
-            <h5 class="card-title text-uppercase">Developing Trade Skills</h5>
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+            <i class="fas fa-handshake fa-3x m-2"></i>
+            <h5 class="card-title text-uppercase">Community</h5>
+            <p class="card-text">A network of Regina tech companies to share knowledge and help Regina stay ahead of the
+              latest technologies.</p>
           </div>
         </div>
       </div>
@@ -38,60 +40,24 @@
     <h2 class="text-center text-uppercase">Discover the Innovation in Regina</h2>
     <div class="row my-5">
       <div class="col mx-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
       </div>
       <div class="col mx-5">
-        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+        pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est
+        laborum.
       </div>
     </div>
   </div>
 </div>
-<div class="container" *ngIf="sponsors">
-  <h2 class="text-center text-uppercase">Our Amazing Sponsors</h2>
-  <h3 class="text-center text-uppercase">Platinum Sponsors</h3>
-  <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'PLATINUM'}); index as i">
-      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
-      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
-      {{sponsor.description}}
-    </div>
-    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'PLATINUM'}).length === 0; index as i">
-       There are currently no Platinum sponsors.
-    </div>
-  </div>
-  <h3 class="text-center text-uppercase">Gold Sponsors</h3>
-  <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'GOLD'}); index as i">
-      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
-      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
-      {{sponsor.description}}
-    </div>
-    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'GOLD'}).length === 0; index as i">
-       There are currently no Gold sponsors.
-    </div>
-  </div>
-  <h3 class="text-center text-uppercase">Silver Sponsors</h3>
-  <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'SILVER'}); index as i">
-      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
-      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
-      {{sponsor.description}}
-    </div>
-    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'SILVER'}).length === 0">
-       There are currently no Silver sponsors.
-    </div>
-  </div>
-  <h3 class="text-center text-uppercase">Bronze Sponsors</h3>
-  <div class="row m-5">
-    <div class="col-4 my-5 mx-auto text-center" data-aos="flip-down" *ngFor="let sponsor of getFilteredSponsors({tier: 'BROZE'})">
-      <img class="card-img-top" [src]="sponsor.img" alt="{{sponsor.name}}">
-      <h5 class="card-title text-uppercase">{{sponsor.name}}</h5>
-      {{sponsor.description}}
-    </div>
-    <div class="col-4 mx-auto text-center" *ngIf="getFilteredSponsors({tier: 'BROZE'}).length === 0">
-       There are currently no Bronze sponsors.
-    </div>
-  </div>
+<div class="container">
+  <app-sponsors></app-sponsors>
   <h2 class="text-center text-uppercase">Meet the Team</h2>
   <div class="row mb-5">
     <div class="col mx-5">
@@ -100,7 +66,8 @@
           <img class="card-img-top" src="/assets/imgs/hackregina-logo.svg" alt="Card image cap">
           <div class="card-body text-center">
             <h5 class="card-title text-uppercase mt-2">David Crossman</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
             <p>
               <a href="https://www.facebook.com/CrossmanDJ"><i class="fab fa-facebook-square fa-2x px-2"></i></a>
               <a href="http://twitter.com/DJCrossman"><i class="fab fa-twitter-square fa-2x px-2"></i></a>
@@ -112,7 +79,8 @@
           <img class="card-img-top" src="/assets/imgs/hackregina-logo.svg" alt="Card image cap">
           <div class="card-body text-center">
             <h5 class="card-title text-uppercase mt-2">Chad McCallum</h5>
-            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+              content.</p>
             <p></p>
           </div>
         </div>
@@ -140,7 +108,8 @@
   <div class="row">
     <div class="col-md-6 order-md-2 mb-4">
       <h4 class="card-title text-uppercase mb-3">Contact us</h4>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore
+        magna aliqua.</p>
 
       <hr class="mb-4">
 
