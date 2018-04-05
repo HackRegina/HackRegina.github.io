@@ -6,6 +6,7 @@ import { ServicesComponent } from './services/services.component'
 import { SponsorsPageComponent } from './sponsorsPage/sponsorsPage.component'
 import { StoryComponent } from './story/story.component'
 import { ContactComponent } from './contact/contact.component'
+import { EventsPageComponent } from './events-page/events-page.component'
 
 const routes: Routes = [
   {
@@ -27,6 +28,10 @@ const routes: Routes = [
   {
     path: 'contact',
     component: ContactComponent
+  },
+  {
+    path: 'events',
+    component: EventsPageComponent
   }
 ]
 

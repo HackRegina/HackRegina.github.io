@@ -15,6 +15,10 @@ import { SponsorsComponent } from './sponsors/sponsors.component'
 import { SponsorComponent } from './sponsor/sponsor.component'
 import { SponsorshipLevelPipe } from './sponsorship-level.pipe'
 
+import { MarkdownModule } from 'ngx-md'
+import { EventsPageComponent } from './events-page/events-page.component'
+import { CalendarModule } from 'ap-angular2-fullcalendar'
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,12 +29,15 @@ import { SponsorshipLevelPipe } from './sponsorship-level.pipe'
     SponsorsPageComponent,
     SponsorsComponent,
     SponsorComponent,
-    SponsorshipLevelPipe
+    SponsorshipLevelPipe,
+    EventsPageComponent
   ],
   imports: [
     BrowserModule,
     HttpClientModule,
-    AppRoutingModule
+    AppRoutingModule,
+    MarkdownModule.forRoot(),
+    CalendarModule
   ],
   providers: [
     ContentfulService

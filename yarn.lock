@@ -97,7 +97,7 @@
   optionalDependencies:
     node-sass "^4.7.2"
 
-"@angular/common@^5.2.0":
+"@angular/common@^5.2.0", "@angular/common@^5.x.x":
   version "5.2.9"
   resolved "https://registry.yarnpkg.com/@angular/common/-/common-5.2.9.tgz#beb25d4434498abae56bd8dc2c01ade3f6c45e81"
   dependencies:
@@ -118,13 +118,13 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/core@^5.2.0":
+"@angular/core@^5.2.0", "@angular/core@^5.x.x":
   version "5.2.9"
   resolved "https://registry.yarnpkg.com/@angular/core/-/core-5.2.9.tgz#3daf13ef9aa754b9954ed21da3eb322e8b20f667"
   dependencies:
     tslib "^1.7.1"
 
-"@angular/forms@^5.2.0":
+"@angular/forms@^5.2.0", "@angular/forms@^5.x.x":
   version "5.2.9"
   resolved "https://registry.yarnpkg.com/@angular/forms/-/forms-5.2.9.tgz#12c45b3a02c398b354f09cc740d914cd904c0c9c"
   dependencies:
@@ -188,6 +188,13 @@
   dependencies:
     typescript "~2.6.2"
 
+"@types/fullcalendar@3.5.2":
+  version "3.5.2"
+  resolved "https://registry.yarnpkg.com/@types/fullcalendar/-/fullcalendar-3.5.2.tgz#88cfb8962e1eb5ce11824fd95bc2f8d97a8e3518"
+  dependencies:
+    "@types/jquery" "*"
+    moment ">=2.14.0"
+
 "@types/jasmine@*", "@types/jasmine@~2.8.3":
   version "2.8.6"
   resolved "https://registry.yarnpkg.com/@types/jasmine/-/jasmine-2.8.6.tgz#14445b6a1613cf4e05dd61c3c3256d0e95c0421e"
@@ -197,6 +204,14 @@
   resolved "https://registry.yarnpkg.com/@types/jasminewd2/-/jasminewd2-2.0.3.tgz#0d2886b0cbdae4c0eeba55e30792f584bf040a95"
   dependencies:
     "@types/jasmine" "*"
+
+"@types/jquery@*":
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.3.1.tgz#55758d44d422756d6329cbf54e6d41931d7ba28f"
+
+"@types/jquery@3.2.17":
+  version "3.2.17"
+  resolved "https://registry.yarnpkg.com/@types/jquery/-/jquery-3.2.17.tgz#01df9805dd5cf83a14cf5bfd81adced7d4fbd970"
 
 "@types/node@^6.0.46", "@types/node@~6.0.60":
   version "6.0.103"
@@ -382,6 +397,17 @@ aos@^2.2.0:
     classlist-polyfill "^1.0.3"
     lodash.debounce "^4.0.6"
     lodash.throttle "^4.0.1"
+
+ap-angular2-fullcalendar@^1.3.7:
+  version "1.3.7"
+  resolved "https://registry.yarnpkg.com/ap-angular2-fullcalendar/-/ap-angular2-fullcalendar-1.3.7.tgz#767c4bc0b74546355c406aa716f961dc66625c58"
+  dependencies:
+    "@angular/common" "^5.x.x"
+    "@angular/core" "^5.x.x"
+    "@angular/forms" "^5.x.x"
+    "@types/fullcalendar" "3.5.2"
+    "@types/jquery" "3.2.17"
+    fullcalendar "3.6.2"
 
 app-root-path@^2.0.1:
   version "2.0.1"
@@ -1265,6 +1291,14 @@ clean-css@4.1.x:
   dependencies:
     source-map "0.5.x"
 
+clipboard@^2.0.0:
+  version "2.0.0"
+  resolved "https://registry.yarnpkg.com/clipboard/-/clipboard-2.0.0.tgz#4661dc972fb72a4c4770b8db78aa9b1caef52b50"
+  dependencies:
+    good-listener "^1.2.2"
+    select "^1.1.2"
+    tiny-emitter "^2.0.0"
+
 cliui@^2.1.0:
   version "2.1.0"
   resolved "https://registry.yarnpkg.com/cliui/-/cliui-2.1.0.tgz#4b475760ff80264c762c3a1719032e91c7fea0d1"
@@ -1927,6 +1961,10 @@ del@^3.0.0:
 delayed-stream@~1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/delayed-stream/-/delayed-stream-1.0.0.tgz#df3ae199acadfb7d440aaae0b29e2272b24ec619"
+
+delegate@^3.1.2:
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/delegate/-/delegate-3.2.0.tgz#b66b71c3158522e8ab5744f720d8ca0c2af59166"
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -2792,6 +2830,20 @@ ftp@~0.3.10:
     readable-stream "1.1.x"
     xregexp "2.0.0"
 
+fullcalendar@3.6.1:
+  version "3.6.1"
+  resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-3.6.1.tgz#0b9b62b1e697d52d39c1118af9e4e411e5045590"
+  dependencies:
+    jquery "2 - 3"
+    moment "^2.9.0"
+
+fullcalendar@3.6.2:
+  version "3.6.2"
+  resolved "https://registry.yarnpkg.com/fullcalendar/-/fullcalendar-3.6.2.tgz#64956e7431be394b3d505b327f6b2e8f629c91da"
+  dependencies:
+    jquery "2 - 3"
+    moment "^2.9.0"
+
 function-bind@^1.0.2, function-bind@^1.1.1:
   version "1.1.1"
   resolved "https://registry.yarnpkg.com/function-bind/-/function-bind-1.1.1.tgz#a56899d3ea3c9bab874bb9773b7c5ede92f4895d"
@@ -2953,6 +3005,12 @@ globule@^1.0.0:
     glob "~7.1.1"
     lodash "~4.17.4"
     minimatch "~3.0.2"
+
+good-listener@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/good-listener/-/good-listener-1.2.2.tgz#d53b30cdf9313dffb7dc9a0d477096aa6d145c50"
+  dependencies:
+    delegate "^3.1.2"
 
 graceful-fs@^4.1.11, graceful-fs@^4.1.2, graceful-fs@^4.1.6:
   version "4.1.11"
@@ -3807,6 +3865,10 @@ jasminewd2@^2.1.0:
   version "2.2.0"
   resolved "https://registry.yarnpkg.com/jasminewd2/-/jasminewd2-2.2.0.tgz#e37cf0b17f199cce23bea71b2039395246b4ec4e"
 
+"jquery@2 - 3", jquery@^3.2.1:
+  version "3.3.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.3.1.tgz#958ce29e81c9790f31be7792df5d4d95fc57fbca"
+
 jquery@3.0.0:
   version "3.0.0"
   resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.0.0.tgz#95a2a9541291a9f819e016f85ba247116d03e4ab"
@@ -4278,7 +4340,7 @@ map-visit@^1.0.0:
   dependencies:
     object-visit "^1.0.0"
 
-marked@^0.3.19:
+marked@^0.3.9:
   version "0.3.19"
   resolved "https://registry.yarnpkg.com/marked/-/marked-0.3.19.tgz#5d47f709c4c9fc3c216b6d46127280f40b39d790"
 
@@ -4479,6 +4541,10 @@ module-deps@^4.0.8:
     through2 "^2.0.0"
     xtend "^4.0.0"
 
+moment@>=2.14.0, moment@^2.22.0, moment@^2.9.0:
+  version "2.22.0"
+  resolved "https://registry.yarnpkg.com/moment/-/moment-2.22.0.tgz#7921ade01017dd45186e7fee5f424f0b8663a730"
+
 move-concurrently@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/move-concurrently/-/move-concurrently-1.0.1.tgz#be2c005fda32e0b29af1f05d7c4b33214c701f92"
@@ -4551,6 +4617,22 @@ netmask@~1.0.4:
 next-tick@1:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/next-tick/-/next-tick-1.0.0.tgz#ca86d1fe8828169b0120208e3dc8424b9db8342c"
+
+ng-fullcalendar@^1.5.5:
+  version "1.5.5"
+  resolved "https://registry.yarnpkg.com/ng-fullcalendar/-/ng-fullcalendar-1.5.5.tgz#95275ef4df1bdccf575d08f8d6b69d402345a388"
+  dependencies:
+    "@types/fullcalendar" "3.5.2"
+    "@types/jquery" "3.2.17"
+    fullcalendar "3.6.1"
+    jquery "^3.2.1"
+
+ngx-md@^3.1.1:
+  version "3.1.1"
+  resolved "https://registry.yarnpkg.com/ngx-md/-/ngx-md-3.1.1.tgz#41310ac862713cb4cc6b4f455743d948943ed728"
+  dependencies:
+    marked "^0.3.9"
+    prismjs "^1.9.0"
 
 no-case@^2.2.0:
   version "2.3.2"
@@ -5478,6 +5560,12 @@ pretty-error@^2.0.2:
     renderkid "^2.0.1"
     utila "~0.4"
 
+prismjs@^1.9.0:
+  version "1.13.0"
+  resolved "https://registry.yarnpkg.com/prismjs/-/prismjs-1.13.0.tgz#edcc14a90bbd72a03e5ffd2bab81a04c79a607a6"
+  optionalDependencies:
+    clipboard "^2.0.0"
+
 process-nextick-args@~1.0.6:
   version "1.0.7"
   resolved "https://registry.yarnpkg.com/process-nextick-args/-/process-nextick-args-1.0.7.tgz#150e20b756590ad3f91093f25a4f2ad8bff30ba3"
@@ -6149,6 +6237,10 @@ scss-tokenizer@^0.2.3:
 select-hose@^2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/select-hose/-/select-hose-2.0.0.tgz#625d8658f865af43ec962bfc376a37359a4994ca"
+
+select@^1.1.2:
+  version "1.1.2"
+  resolved "https://registry.yarnpkg.com/select/-/select-1.1.2.tgz#0e7350acdec80b1108528786ec1d4418d11b396d"
 
 selenium-webdriver@3.0.1:
   version "3.0.1"
@@ -6898,6 +6990,10 @@ timers-browserify@^2.0.4:
 timespan@2.3.x:
   version "2.3.0"
   resolved "https://registry.yarnpkg.com/timespan/-/timespan-2.3.0.tgz#4902ce040bd13d845c8f59b27e9d59bad6f39929"
+
+tiny-emitter@^2.0.0:
+  version "2.0.2"
+  resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-2.0.2.tgz#82d27468aca5ade8e5fd1e6d22b57dd43ebdfb7c"
 
 tmp@0.0.24:
   version "0.0.24"

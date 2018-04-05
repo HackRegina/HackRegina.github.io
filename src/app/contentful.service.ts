@@ -25,6 +25,10 @@ export class ContentfulService {
     return Observable.fromPromise(this.client.getEntries({'content_type': 'sponsors'})).map(ContentfulService.mapToEntries)
   }
 
+  getEvents (): Observable<any> {
+    return Observable.fromPromise(this.client.getEntries({'content_type': 'event'})).map(ContentfulService.mapToEntries)
+  }
+
   private static mapToEntries (response) {
     return response.items
   }
