@@ -6,6 +6,14 @@
   background-image: url(/assets/imgs/bg.png);
 }
 
+.bg-stock-img2 {
+  background-size: auto 150%;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: top center;
+  background-image: url(/assets/imgs/bg2.png);
+}
+
 .card-overlap {
   margin-top: -70px;
 }

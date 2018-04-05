@@ -1,2 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+$theme-colors: (
+  "primary": #252a44,
+  "secondary": #77232b
+);
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
