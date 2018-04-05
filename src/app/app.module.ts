@@ -17,7 +17,9 @@ import { SponsorshipLevelPipe } from './sponsorship-level.pipe'
 
 import { MarkdownModule } from 'ngx-md'
 import { EventsPageComponent } from './events-page/events-page.component'
-import { CalendarModule } from 'ap-angular2-fullcalendar'
+import { CalendarModule } from 'ap-angular2-fullcalendar';
+import { TeamComponent } from './team/team.component';
+import { TeamMemberComponent } from './team-member/team-member.component'
 
 @NgModule({
   declarations: [
@@ -30,7 +32,9 @@ import { CalendarModule } from 'ap-angular2-fullcalendar'
     SponsorsComponent,
     SponsorComponent,
     SponsorshipLevelPipe,
-    EventsPageComponent
+    EventsPageComponent,
+    TeamComponent,
+    TeamMemberComponent
   ],
   imports: [
     BrowserModule,

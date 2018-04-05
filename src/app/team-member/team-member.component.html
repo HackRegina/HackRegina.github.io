@@ -1,0 +1,17 @@
+<div class="card" style="height: 100%">
+  <img class="card-img-top" src="/assets/imgs/hackregina-logo.svg" alt="Card image cap">
+  <div class="card-body text-center">
+    <h5 class="card-title text-uppercase mt-2">{{teamMember.fields.name}}</h5>
+    <markdown>
+      {{teamMember.fields.description}}
+    </markdown>
+    <p>
+      <a *ngIf="teamMember.fields.facebook" [href]="teamMember.fields.facebook"><i
+        class="fab fa-facebook-square fa-2x px-2"></i></a>
+      <a *ngIf="teamMember.fields.twitter" [href]="teamMember.fields.twitter"><i
+        class="fab fa-twitter-square fa-2x px-2"></i></a>
+      <a *ngIf="teamMember.fields.github" [href]="teamMember.fields.github"><i
+        class="fab fa-github-square fa-2x px-2"></i></a>
+    </p>
+  </div>
+</div>

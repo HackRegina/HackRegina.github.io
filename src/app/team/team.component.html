@@ -1,0 +1,10 @@
+<h2 class="text-center text-uppercase">Meet the Team</h2>
+<div class="row mb-5">
+  <div class="col mx-5" *ngFor="let teamMember of teamMembers">
+    <div class="card-deck" style="height: 100%">
+      <app-team-member [teamMember]="teamMember"></app-team-member>
+    </div>
+  </div>
+</div>
+
+
