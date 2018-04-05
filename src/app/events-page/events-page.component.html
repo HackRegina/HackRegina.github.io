@@ -1,3 +1,8 @@
-<div *ngIf="calendarOptions">
-  <angular2-fullcalendar #ucCalendar [options]="calendarOptions"></angular2-fullcalendar>
+<div class="container" *ngIf="calendarOptions">
+  <div class="col mx-auto">
+    <h1 class="text-center">Upcoming Events</h1>
+    <div class="my-2">
+      <angular2-fullcalendar #ucCalendar [options]="calendarOptions"></angular2-fullcalendar>
+    </div>
+  </div>
 </div>
