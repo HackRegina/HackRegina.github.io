@@ -10,10 +10,6 @@ MIT
 MIT
 MIT
 
-@angular/service-worker@5.2.9
-MIT
-MIT
-
 ngx-md@3.1.1
 MIT
 MIT
