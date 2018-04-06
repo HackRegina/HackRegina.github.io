@@ -10,16 +10,17 @@ import { ServicesComponent } from './services/services.component'
 import { StoryComponent } from './story/story.component'
 import { ContactComponent } from './contact/contact.component'
 import { SponsorsPageComponent } from './sponsorsPage/sponsorsPage.component'
-import { ContentfulService } from './contentful.service'
+import { ContentfulService, ContentfulService } from './contentful.service'
 import { SponsorsComponent } from './sponsors/sponsors.component'
 import { SponsorComponent } from './sponsor/sponsor.component'
 import { SponsorshipLevelPipe } from './sponsorship-level.pipe'
 
 import { MarkdownModule } from 'ngx-md'
 import { EventsPageComponent } from './events-page/events-page.component'
-import { CalendarModule } from 'ap-angular2-fullcalendar';
-import { TeamComponent } from './team/team.component';
+import { CalendarModule } from 'ap-angular2-fullcalendar'
+import { TeamComponent } from './team/team.component'
 import { TeamMemberComponent } from './team-member/team-member.component'
+import { HashLocationStrategy, LocationStrategy } from '@angular/common'
 
 @NgModule({
   declarations: [
@@ -44,7 +45,8 @@ import { TeamMemberComponent } from './team-member/team-member.component'
     CalendarModule
   ],
   providers: [
-    ContentfulService
+    ContentfulService,
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]
 })
