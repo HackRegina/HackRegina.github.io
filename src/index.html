@@ -6,6 +6,12 @@
   <base href="/">
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#252a44"/>
+  <meta name="description" content="HackRegina is the beginning of a strong and well-known tech community for Regina, SK. The non-profit organization started as a small Slack channel but has begun to grow into a community for software developers to share knowledge and get to know one another.">
+  <meta name="author" content="HackRegina">
+  <meta name="keywords" content="tech, regina, tech community, hackathon, hackregina, coding, programming, networking">
+
+  <link rel="manifest" href="manifest.json">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
 
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css">
@@ -24,6 +30,22 @@
 
 </head>
 <body>
-<app-root></app-root>
+<app-root>
+  <div style="display: table; height: 100%;position: absolute;overflow: hidden;width: 100%;">
+    <div style="#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+      <h3 style="text-align: center; color: #252a44; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';#position: relative; #top: -50%;margin:0 auto; width: 200px">
+          <i class="fal fa-spinner fa-pulse fa-5x"></i>
+          <p class="d-none" style="font-size: 2em">...</p>
+      </h3>
+    </div>
+  </div>
+</app-root>
+<noscript>
+
+  <h3 style="text-align: center; color: #252a44; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin: 2rem;">
+      <img src="/assets/imgs/hackregina-logo.svg" alt="HackRegina">
+      <p>Sorry, but app is not available without javascript</p>
+  </h3>
+</noscript>
 </body>
 </html>
