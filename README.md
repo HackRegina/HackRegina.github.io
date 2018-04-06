@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/HackRegina/website.svg?branch=develop)](https://travis-ci.org/HackRegina/website)
+[![Build Status](https://travis-ci.org/HackRegina/HackRegina.github.io.svg?branch=develop)](https://travis-ci.org/HackRegina/website)
 
 # HackReginaWebsite
 
