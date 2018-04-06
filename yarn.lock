@@ -158,12 +158,6 @@
   dependencies:
     tslib "^1.7.1"
 
-"@angular/service-worker@^5.2.9":
-  version "5.2.9"
-  resolved "https://registry.yarnpkg.com/@angular/service-worker/-/service-worker-5.2.9.tgz#47ee439f2f896ac701fee271d046589a6c46b6af"
-  dependencies:
-    tslib "^1.7.1"
-
 "@contentful/axios@^0.18.0":
   version "0.18.0"
   resolved "https://registry.yarnpkg.com/@contentful/axios/-/axios-0.18.0.tgz#576e0e6047411a66971e82d40688a8c795e62f27"

@@ -1,8 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { HttpClientModule } from '@angular/common/http'
-import { ServiceWorkerModule } from '@angular/service-worker'
-import { environment } from '../environments/environment'
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -44,8 +42,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
     HttpClientModule,
     AppRoutingModule,
     MarkdownModule.forRoot(),
-    CalendarModule,
-    environment.production ? ServiceWorkerModule.register('ngsw-worker.js') : []
+    CalendarModule
   ],
   providers: [
     ContentfulService,
