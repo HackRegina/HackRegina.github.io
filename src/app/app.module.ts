@@ -49,7 +49,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
   ],
   providers: [
     ContentfulService,
-    // {provide: LocationStrategy, useClass: HashLocationStrategy},
+    {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]
 })
