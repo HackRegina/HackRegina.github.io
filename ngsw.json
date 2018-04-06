@@ -9,8 +9,8 @@
       "urls": [
         "/favicon.ico",
         "/index.html",
-        "/inline.6c5e9ea1c307239b3d96.bundle.js",
-        "/main.701f630d0c5c0cf42a17.bundle.js",
+        "/inline.4c813e0dc34d019f329b.bundle.js",
+        "/main.32ad1d73ad889af37d8b.bundle.js",
         "/polyfills.91ae0387f2121226a3fb.bundle.js",
         "/scripts.6fe857f3deb581f48098.bundle.js",
         "/styles.ed8d1135a9c2c7597d08.bundle.css"
@@ -60,9 +60,9 @@
   ],
   "dataGroups": [],
   "hashTable": {
-    "/inline.6c5e9ea1c307239b3d96.bundle.js": "2fe71c029efbfd6e504a9ee14b4cb4b712dc4664",
+    "/inline.4c813e0dc34d019f329b.bundle.js": "839e0a9493737b717cde5d535be3697ad8b4bdaa",
     "/assets/2018 Sponsorship Package.pdf": "d1ce71bd7c06bafcea2feec42afc9c52d2f782ae",
-    "/main.701f630d0c5c0cf42a17.bundle.js": "472c22d976b8397a610d2de4b40f6c0f55307466",
+    "/main.32ad1d73ad889af37d8b.bundle.js": "4bcf105376d1500737077e5924e65a33072fc6d2",
     "/assets/css/fontawesome-all.min.css": "68ab0635fe750681cf044be0ad84ad522ab665a3",
     "/polyfills.91ae0387f2121226a3fb.bundle.js": "a661cfbb8ee76ab51c60636195b09ea1ae8d7c7c",
     "/assets/imgs/bg.png": "f6ce5ec6dbb9354831bd05e270e3ece1c3f77f1f",
@@ -72,7 +72,7 @@
     "/assets/imgs/bg3.png": "93c2e4c467e544fb8ad34929dd267f502ff12d4d",
     "/favicon.ico": "61e2660cc89098494f9e0ebf65a629e4ae902f83",
     "/assets/imgs/hackregina-192x192.png": "4beb897ef546f0a4f68b5cb5a5a3d96aa5d9608d",
-    "/index.html": "4c12be437d130fb8757725241eee2d50fdc61217",
+    "/index.html": "b166367b4f0f2baa5725c67ddf4694b1cf76f4a9",
     "/assets/imgs/hackregina-256x256.png": "5e77352b670fc7bf7f9c803ed99cbceb3984ff48",
     "/assets/imgs/hackregina-384x384.png": "1eef61c931ec4a15496659db9052ba9f47c8fd2d",
     "/assets/imgs/hackregina-512x512.png": "deb6f2ca046b425a653b74757662ecb441103091",
