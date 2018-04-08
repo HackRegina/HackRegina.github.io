@@ -30,7 +30,7 @@ const routes: Routes = [
     component: ContactComponent
   },
   {
-    path: 'events',
+    path: 'aasdfsadfasdfsdffsd',
     component: EventsPageComponent
   }
 ]
