@@ -5,18 +5,45 @@
   background-position: top center;
 }
 
-.bg-stock-img1 {
-  background-image: url(/assets/imgs/bg.png);
-}
-
-.bg-stock-img2 {
-  background-image: url(/assets/imgs/bg2.png);
-}
-
-.bg-stock-img3 {
-  background-image: url(/assets/imgs/bg3.png);
-}
-
 .card-overlap {
   margin-top: -70px;
+}
+
+/* default screen, non-retina */
+.bg-stock-img1 { background-image: url("/assets/imgs/bg1-1920.png"); }
+.bg-stock-img2 { background-image: url("/assets/imgs/bg2-1920.png"); }
+.bg-stock-img3 { background-image: url("/assets/imgs/bg3-1920.png"); }
+
+@media only screen and (max-width: 576px) {
+    /* Small screen, non-retina */
+    .bg-stock-img1 { background-image: url("/assets/imgs/bg1-576.png"); }
+    .bg-stock-img2 { background-image: url("/assets/imgs/bg2-576.png"); }
+    .bg-stock-img3 { background-image: url("/assets/imgs/bg3-576.png"); }
+}
+@media
+only screen and (min-resolution: 2dppx) and (max-width: 576px) {
+    /* Small screen, retina */
+    .bg-stock-img1 { background-image: url("/assets/imgs/bg1-768.png"); }
+    .bg-stock-img2 { background-image: url("/assets/imgs/bg2-768.png"); }
+    .bg-stock-img3 { background-image: url("/assets/imgs/bg3-768.png"); }
+}
+@media only screen and (min-width: 768px) and (max-width: 992px) {
+    /* Medium screen, non-retina */
+    .bg-stock-img1 { background-image: url("/assets/imgs/bg1-768.png"); }
+    .bg-stock-img2 { background-image: url("/assets/imgs/bg2-768.png"); }
+    .bg-stock-img3 { background-image: url("/assets/imgs/bg3-768.png"); }
+}
+@media
+only screen and (min-resolution: 2dppx) and (min-width: 768px) and (max-width: 992px) {
+    /* Medium screen, retina */
+    .bg-stock-img1 { background-image: url("/assets/imgs/bg1-992.png"); }
+    .bg-stock-img2 { background-image: url("/assets/imgs/bg2-992.png"); }
+    .bg-stock-img3 { background-image: url("/assets/imgs/bg3-992.png"); }
+}
+@media
+only screen and (min-resolution: 2dppx) and (min-width: 992px) and (max-width: 1200px) {
+    /* Large screen, retina */
+    .bg-stock-img1 { background-image: url("/assets/imgs/bg1-1200.png"); }
+    .bg-stock-img2 { background-image: url("/assets/imgs/bg2-1200.png"); }
+    .bg-stock-img3 { background-image: url("/assets/imgs/bg3-1200.png"); }
 }
