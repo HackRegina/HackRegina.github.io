@@ -7,6 +7,8 @@ import { SponsorsPageComponent } from './sponsorsPage/sponsorsPage.component'
 import { StoryComponent } from './story/story.component'
 import { ContactComponent } from './contact/contact.component'
 import { EventsPageComponent } from './events-page/events-page.component'
+import { JobsComponent } from './jobs/jobs.component'
+import { JobComponent } from './job/job.component'
 
 const routes: Routes = [
   {
@@ -32,6 +34,14 @@ const routes: Routes = [
   {
     path: 'events',
     component: EventsPageComponent
+  },
+  {
+    path: 'jobs',
+    component: JobsComponent
+  },
+  {
+    path: 'job/:jobId',
+    component: JobComponent
   }
 ]
 

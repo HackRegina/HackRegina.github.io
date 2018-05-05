@@ -6,3 +6,4 @@ interface NodeModule {
 }
 
 declare var moment
+declare var marked

@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row">
+    <div class="col-12 table-responsive mt-3">
+      <table class="table table-striped table-borderless">
+        <tr>
+          <th>Job</th>
+          <th>Date Posted</th>
+          <th>Labels</th>
+        </tr>
+        <tr *ngFor="let job of jobs" (click)="viewJob(job)" class="hover">
+          <td>{{job.title}}</td>
+          <td>{{job.created_at | date:'longDate'}}</td>
+          <td>
+            <span class="badge badge-pill badge-primary" *ngFor="let label of job.labels">{{label.name}}</span>
+          </td>
+        </tr>
+      </table>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12 mb-3">
+      <a href="https://github.com/HackRegina/jobs/issues/new">
+        <button class="btn btn-primary">Post Job to GitHub</button>
+      </a>
+    </div>
+  </div>
+</div>
