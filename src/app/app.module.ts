@@ -1,7 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser'
 import { NgModule } from '@angular/core'
 import { HttpClientModule } from '@angular/common/http'
-import { environment } from '../environments/environment'
 
 import { AppRoutingModule } from './app-routing.module'
 
@@ -22,6 +21,9 @@ import { CalendarModule } from 'ap-angular2-fullcalendar'
 import { TeamComponent } from './team/team.component'
 import { TeamMemberComponent } from './team-member/team-member.component'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common'
+import { JobsComponent } from './jobs/jobs.component'
+import { JobsService } from './jobs.service';
+import { JobComponent } from './job/job.component'
 
 @NgModule({
   declarations: [
@@ -36,7 +38,9 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
     SponsorshipLevelPipe,
     EventsPageComponent,
     TeamComponent,
-    TeamMemberComponent
+    TeamMemberComponent,
+    JobsComponent,
+    JobComponent
   ],
   imports: [
     BrowserModule,
@@ -47,6 +51,7 @@ import { HashLocationStrategy, LocationStrategy } from '@angular/common'
   ],
   providers: [
     ContentfulService,
+    JobsService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]

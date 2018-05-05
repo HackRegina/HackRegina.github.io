@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row mt-3">
+    <div class="col-12">
+      <button class="btn btn-primary" routerLink="../../jobs">Back to Jobs</button>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <hr/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <h1>{{job.title}}</h1>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <hr/>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12" [innerHtml]="body">
+    </div>
+  </div>
+</div>
