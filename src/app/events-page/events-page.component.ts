@@ -1,9 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
-import { CalendarComponent } from 'ap-angular2-fullcalendar'
 import { ContentfulService } from '../contentful.service'
 
 import * as moment from 'moment'
-import { Options } from 'fullcalendar'
+import { CalendarComponent } from 'ap-angular-fullcalendar'
 
 @Component({
   selector: 'app-events-page',
@@ -12,7 +11,7 @@ import { Options } from 'fullcalendar'
 })
 export class EventsPageComponent implements OnInit {
 
-  calendarOptions: Options
+  calendarOptions
 
   @ViewChild(CalendarComponent) ucCalendar: CalendarComponent
 
