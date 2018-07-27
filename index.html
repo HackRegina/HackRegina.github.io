@@ -1,7 +1,76 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><title>HackRegina</title><base href="/"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#252a44"/><meta name="description" content="HackRegina is the beginning of a strong and well-known tech community for Regina, SK. The non-profit organization started as a small Slack channel but has begun to grow into a community for software developers to share knowledge and get to know one another."><meta name="author" content="HackRegina"><meta name="keywords" content="tech, regina, tech community, hackathon, hackregina, coding, programming, networking"><link rel="manifest" href="manifest.json"><link rel="icon" type="image/x-icon" href="favicon.ico"><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css"><!-- Global site tag (gtag.js) - Google Analytics --><script async src="https://www.googletagmanager.com/gtag/js?id=UA-117071903-1"></script><script>window.dataLayer = window.dataLayer || []
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>HackRegina</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#252a44"/>
+  <meta name="description"
+        content="HackRegina is the beginning of a strong and well-known tech community for Regina, SK. The non-profit organization started as a small Slack channel but has begun to grow into a community for software developers to share knowledge and get to know one another.">
+  <meta name="author" content="HackRegina">
+  <meta name="keywords" content="tech, regina, tech community, hackathon, hackregina, coding, programming, networking">
+
+  <link rel="manifest" href="manifest.json">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.6.1/fullcalendar.min.css">
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-117071903-1"></script>
+  <script>
+    window.dataLayer = window.dataLayer || []
 
     function gtag () {dataLayer.push(arguments)}
 
     gtag('js', new Date())
 
-    gtag('config', 'UA-117071903-1')</script><link href="styles.42d108b44d25a0b18855.bundle.css" rel="stylesheet"/></head><body><app-root><div style="display: table; height: 100%;position: absolute;overflow: hidden;width: 100%;"><div style="#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;"><h3 style="text-align: center; color: #252a44; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';#position: relative; #top: -50%;margin:0 auto; width: 200px"><i class="fal fa-spinner fa-pulse fa-5x"></i><p class="d-none" style="font-size: 2em">...</p></h3></div></div></app-root><noscript><h3 style="text-align: center; color: #252a44; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin: 2rem;"><p>Sorry, but HackRegina's website is not available without javascript</p></h3></noscript><script type="text/javascript" src="inline.318b50c57b4eba3d437b.bundle.js"></script><script type="text/javascript" src="polyfills.80d207f3a6c753ebf1b1.bundle.js"></script><script type="text/javascript" src="scripts.09f31c87ac1f4fc171d3.bundle.js"></script><script type="text/javascript" src="main.74a11643ae2dd1fe0614.bundle.js"></script></body></html>
+    gtag('config', 'UA-117071903-1')
+  </script>
+
+  <script>
+    function getParameterByName (name) {
+      var url = window.location.href
+      name = name.replace(/[\[\]]/g, '\\$&')
+      var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+        results = regex.exec(url)
+      if (!results) return null
+      if (!results[2]) return ''
+      return decodeURIComponent(results[2].replace(/\+/g, ' '))
+
+    }
+
+    var code = getParameterByName('code')
+    var state = getParameterByName('state')
+
+    console.log('code: ' + code)
+    console.log('state: ' + state)
+
+    if (code && state) {
+      window.location = '/#/cfp?code=' + code + '&state=' + state
+    }
+  </script>
+
+<link rel="stylesheet" href="styles.14f4ce1a816f30347b8e.css"></head>
+<body>
+<app-root>
+  <div style="display: table; height: 100%;position: absolute;overflow: hidden;width: 100%;">
+    <div style="#position: absolute; #top: 50%;display: table-cell; vertical-align: middle;">
+      <h3
+        style="text-align: center; color: #252a44; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';#position: relative; #top: -50%;margin:0 auto; width: 200px">
+        <i class="fal fa-spinner fa-pulse fa-5x"></i>
+        <p class="d-none" style="font-size: 2em">...</p>
+      </h3>
+    </div>
+  </div>
+</app-root>
+<noscript>
+
+  <h3
+    style="text-align: center; color: #252a44; font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol'; margin: 2rem;">
+    <p>Sorry, but HackRegina's website is not available without javascript</p>
+  </h3>
+</noscript>
+<script type="text/javascript" src="runtime.a66f828dca56eeb90e02.js"></script><script type="text/javascript" src="polyfills.5e71008a880bef6b019f.js"></script><script type="text/javascript" src="scripts.bd344e504a8bfc564b88.js"></script><script type="text/javascript" src="main.c9e2cd492c622b17d8dd.js"></script></body>
+</html>
