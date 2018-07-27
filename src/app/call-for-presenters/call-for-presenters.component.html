@@ -111,6 +111,12 @@
           <input type="text" class="form-control" id="github" formControlName="github">
         </div>
         <button class="btn btn-primary" (click)="submit()">Submit</button>
+        <div>
+          <small class="text-muted">You will be prompted to login with your Github account. We only use this to open an
+            issue in our CFP repo on your behalf. This is a great way for us to keep track of things, keep in touch with
+            you and of course, it's free!
+          </small>
+        </div>
         <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" *ngIf="err">
           Something went wrong. Please see above for more information.
         </div>
