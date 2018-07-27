@@ -9,11 +9,6 @@ import { ContactComponent } from './contact/contact.component'
 import { EventsPageComponent } from './events-page/events-page.component'
 import { JobsComponent } from './jobs/jobs.component'
 import { JobComponent } from './job/job.component'
-import { CallForPresentersModule } from './call-for-presenters/call-for-presenters.module'
-
-export function loadCallForPresentersModule () {
-  return CallForPresentersModule
-}
 
 const routes: Routes = [
   {
@@ -21,6 +16,7 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
+    
     path: 'services',
     component: ServicesComponent
   },
@@ -50,7 +46,7 @@ const routes: Routes = [
   },
   {
     path: 'cfp',
-    loadChildren: loadCallForPresentersModule
+    loadChildren: 'app/call-for-presenters/call-for-presenters.module#CallForPresentersModule'
   },
 ]
 
