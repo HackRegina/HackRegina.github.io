@@ -10,9 +10,7 @@
     "experimentalDecorators": true,
     "target": "es5",
     "paths": {
-      "contentful": [
-        "./node_modules/contentful/dist/contentful.browser.js"
-      ]
+
     },
     "typeRoots": [
       "node_modules/@types"
