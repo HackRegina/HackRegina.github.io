@@ -17,13 +17,15 @@ import { SponsorshipLevelPipe } from './sponsorship-level.pipe'
 
 import { MarkdownModule } from 'ngx-md'
 import { EventsPageComponent } from './events-page/events-page.component'
-import { CalendarModule } from 'ap-angular2-fullcalendar'
 import { TeamComponent } from './team/team.component'
 import { TeamMemberComponent } from './team-member/team-member.component'
 import { HashLocationStrategy, LocationStrategy } from '@angular/common'
 import { JobsComponent } from './jobs/jobs.component'
-import { JobsService } from './jobs.service';
+import { JobsService } from './jobs.service'
 import { JobComponent } from './job/job.component'
+import { CallForPresentersModule } from './call-for-presenters/call-for-presenters.module'
+import { CfpCallbackService } from './cfp-callback.service'
+import { CalendarModule } from 'ap-angular-fullcalendar'
 
 @NgModule({
   declarations: [
@@ -47,11 +49,13 @@ import { JobComponent } from './job/job.component'
     HttpClientModule,
     AppRoutingModule,
     MarkdownModule.forRoot(),
-    CalendarModule
+    CalendarModule,
+    CallForPresentersModule
   ],
   providers: [
     ContentfulService,
     JobsService,
+    CfpCallbackService,
     {provide: LocationStrategy, useClass: HashLocationStrategy},
   ],
   bootstrap: [AppComponent]

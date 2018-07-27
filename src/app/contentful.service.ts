@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core'
 import * as contentful from 'contentful'
-import { Observable } from 'rxjs/Observable'
-import 'rxjs/add/observable/fromPromise'
-import 'rxjs/add/operator/map'
+import { Observable } from 'rxjs'
+import { from } from 'rxjs';
+
+
 
 @Injectable()
 export class ContentfulService {
@@ -18,19 +19,19 @@ export class ContentfulService {
   }
 
   getSponsorshipLevels (): Observable<any> {
-    return Observable.fromPromise(this.client.getEntries({'content_type': 'sponsorshipLevels'})).map(ContentfulService.mapToEntries)
+    return from(this.client.getEntries({'content_type': 'sponsorshipLevels'})).map(ContentfulService.mapToEntries)
   }
 
   getSponsors (): Observable<any> {
-    return Observable.fromPromise(this.client.getEntries({'content_type': 'sponsors'})).map(ContentfulService.mapToEntries)
+    return from(this.client.getEntries({'content_type': 'sponsors'})).map(ContentfulService.mapToEntries)
   }
 
   getEvents (): Observable<any> {
-    return Observable.fromPromise(this.client.getEntries({'content_type': 'event'})).map(ContentfulService.mapToEntries)
+    return from(this.client.getEntries({'content_type': 'event'})).map(ContentfulService.mapToEntries)
   }
 
   getTeamMembers (): Observable<any> {
-    return Observable.fromPromise(this.client.getEntries({'content_type': 'teamMember'})).map(ContentfulService.mapToEntries)
+    return from(this.client.getEntries({'content_type': 'teamMember'})).map(ContentfulService.mapToEntries)
   }
 
   private static mapToEntries (response) {

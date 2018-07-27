@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core'
 import { ContentfulService } from '../contentful.service'
-import { Observable } from 'rxjs/Observable'
+import { Observable } from 'rxjs'
 
 @Component({
   selector: 'app-sponsors',
