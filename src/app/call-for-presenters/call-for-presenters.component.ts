@@ -3,6 +3,21 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms'
 import { HttpClient, HttpHeaders } from '@angular/common/http'
 import { ActivatedRoute } from '@angular/router'
 
+let issueTemplate = `# {title}
+## {name}
+
+### Description
+{description}
+
+### Bio
+{bio}
+
+### Contact
+Twitter: {twitter}
+Website: {website}
+Github: {github}
+Email: {email}`
+
 @Component({
   selector: 'app-call-for-presenters',
   templateUrl: './call-for-presenters.component.html',
@@ -49,14 +64,7 @@ export class CallForPresentersComponent implements OnInit {
 
           this.http.post(`https://api.github.com/repos/HackRegina/cfp/issues`, {
             title: `${state.name} - ${state.title}`,
-            body: `Title: ${state.title}
-Name: ${state.name}
-Description: ${state.description}
-Bio: ${state.bio}
-Twitter: ${state.twitter}
-Website: ${state.website}
-Github: ${state.github}
-Email: ${state.email}`
+            body: this.getTemplate(issueTemplate)
           }, httpOptions)
             .subscribe(res => {
                 this.url = (<any>res).html_url
@@ -65,6 +73,17 @@ Email: ${state.email}`
         }, () => this.err = true
       )
     }
+  }
+
+  getTemplate(state) {
+    return issueTemplate.replace('{title}', state.title)
+      .replace('{name}', state.name)
+      .replace('{description}', state.description)
+      .replace('{bio}', state.bio)
+      .replace('{twitter}', state.twitter)
+      .replace('{website}', state.website)
+      .replace('{github}', state.github)
+      .replace('{email}', state.email)
   }
 
   submit () {
