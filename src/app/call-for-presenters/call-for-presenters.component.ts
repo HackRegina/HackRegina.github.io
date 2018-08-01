@@ -29,8 +29,8 @@ export class CallForPresentersComponent implements OnInit {
       'email': ['', Validators.required]
     })
 
-    let state = this.route.snapshot.queryParams.state
-    let code = this.route.snapshot.queryParams.code
+    let state = this.route.snapshot.queryParams.butt
+    let code = this.route.snapshot.queryParams.head
 
     if (state && code) {
       state = JSON.parse(state)
