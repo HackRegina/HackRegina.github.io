@@ -1,0 +1,39 @@
+<div class="row no-gutters mb-3">
+  <div class="col-4 text-left">
+    <button type="button" class="btn btn-light mx-2" (click)="goToToday()">Today</button>
+    <button type="button" class="btn btn-link ml-2" (click)="prev()"><</button>
+    <button type="button" class="btn btn-link mr-2" (click)="next()">></button>
+  </div>
+  <div class="col-4 text-center h4 m-0">
+    <span *ngIf="viewBy === 'M'">{{current.format('MMMM, YYYY')}}</span>
+  </div>
+  <!--<div class="col-2 offset-2 text-right">-->
+    <!--<select [ngModel]="viewBy" class="custom-select">-->
+      <!--&lt;!&ndash;<option value="D">Day</option>&ndash;&gt;-->
+      <!--&lt;!&ndash;<option value="W">Week</option>&ndash;&gt;-->
+      <!--<option value="M" selected>Month</option>-->
+      <!--&lt;!&ndash;<option value="Y">Year</option>&ndash;&gt;-->
+      <!--&lt;!&ndash;<option value="A">Schedule</option>&ndash;&gt;-->
+    <!--</select>-->
+  <!--</div>-->
+</div>
+<div *ngIf="viewBy === 'M'">
+  <div class="row no-gutters" *ngFor="let week of calendar; index as weekIndex">
+    <div class="col border day" *ngFor="let day of week.days" [ngClass]="{'bg-light text-muted': day.isBefore(today, 'days'), 'text-muted': !current.isSame(day, 'months')}">
+      <p class="m-0 mx-2 text-dark"
+         [ngClass]="{'text-primary font-weight-bold': today.day() === day.day()}" *ngIf="weekIndex === 0">
+        {{day | date:'EEE'}}
+      </p>
+      <span class="m-2" [ngClass]="{'badge badge-pill badge-primary d-inline': today.isSame(day, 'days')}">
+        <span *ngIf="day.date() === 1">{{day | date:'MMM'}}</span>
+        {{day | date:'d'}}
+      </span>
+      <ul class="ml-2 pl-4 text-secondary">
+        <li *ngFor="let event of getEvents(day)">
+          <small class="text-primary"><a [href]="event.url" target="_blank">{{event.start | date:'ha'}} - {{event.title}}</a></small>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
+

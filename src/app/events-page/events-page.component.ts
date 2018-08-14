@@ -1,8 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core'
 import { ContentfulService } from '../contentful.service'
-
 import * as moment from 'moment'
-import { CalendarComponent } from 'ap-angular-fullcalendar'
 
 @Component({
   selector: 'app-events-page',
@@ -11,35 +9,25 @@ import { CalendarComponent } from 'ap-angular-fullcalendar'
 })
 export class EventsPageComponent implements OnInit {
 
-  calendarOptions
-
-  @ViewChild(CalendarComponent) ucCalendar: CalendarComponent
+  events: any[] = []
 
   constructor (private contentful: ContentfulService) {}
 
   ngOnInit () {
     this.contentful.getEvents().subscribe(res => {
-      const events = res.map(event => ({
+    //   let res = [{}, {}, {}]
+      this.events = res.map(event => ({
         title: event.fields.title,
         allDay: event.fields.allDay,
         start: event.fields.start,
         end: event.fields.end,
         url: event.fields.url
+        // title: 'Test',
+        // start:'2018-08-02T20:02:10.223Z',
+        // end: '2018-08-02T22:02:10.223Z',
+        // url: 'www.google.com'
       }))
-
-      this.calendarOptions = {
-        editable: false,
-        eventLimit: false,
-        header: {
-          left: 'prev,next today',
-          center: 'title',
-          right: 'month,agendaWeek,agendaDay,listMonth'
-        },
-        events: events,
-        timezone: 'America/Regina'
-      }
     })
-
   }
 
 }

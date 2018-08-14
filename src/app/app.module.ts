@@ -26,6 +26,8 @@ import { JobComponent } from './job/job.component'
 import { CallForPresentersModule } from './call-for-presenters/call-for-presenters.module'
 import { CfpCallbackService } from './cfp-callback.service'
 import { CalendarModule } from 'ap-angular-fullcalendar'
+import {MomentCalendarComponent} from "./moment-calendar/moment-calendar.component";
+import {FormsModule} from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -42,9 +44,11 @@ import { CalendarModule } from 'ap-angular-fullcalendar'
     TeamComponent,
     TeamMemberComponent,
     JobsComponent,
-    JobComponent
+    JobComponent,
+    MomentCalendarComponent
   ],
   imports: [
+    FormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,
