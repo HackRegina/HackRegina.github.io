@@ -53,7 +53,7 @@ import {FormsModule} from "@angular/forms";
     HttpClientModule,
     AppRoutingModule,
     MarkdownModule.forRoot(),
-    CalendarModule,
+    // CalendarModule,
     CallForPresentersModule
   ],
   providers: [
