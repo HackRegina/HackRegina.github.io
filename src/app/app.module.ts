@@ -25,7 +25,7 @@ import { JobsService } from './jobs.service'
 import { JobComponent } from './job/job.component'
 import { CallForPresentersModule } from './call-for-presenters/call-for-presenters.module'
 import { CfpCallbackService } from './cfp-callback.service'
-import { CalendarModule } from 'ap-angular-fullcalendar'
+// import { CalendarModule } from 'ap-angular-fullcalendar'
 import {MomentCalendarComponent} from "./moment-calendar/moment-calendar.component";
 import {FormsModule} from "@angular/forms";
 
