@@ -22,3 +22,5 @@ deploy:
   target-branch: master
   on:
     branch: develop
+
+fqdn: www.hackregina.com
