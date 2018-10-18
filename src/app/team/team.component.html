@@ -1,7 +1,7 @@
 <div class="row mb-5">
   <div class="col mx-5" *ngFor="let teamMember of teamMembers">
     <div class="card-deck" style="height: 100%">
-      <app-team-member [teamMember]="teamMember"></app-team-member>
+      <app-team-member [teamMember]="teamMember.fields"></app-team-member>
     </div>
   </div>
 </div>

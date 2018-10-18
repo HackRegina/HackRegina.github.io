@@ -1,26 +1,26 @@
 <div class="card" style="height: 100%">
-  <img class="card-img-top" src="/assets/imgs/hackregina-logo.svg" alt="HackRegina">
+  <img class="card-img-top" [src]="photo" alt="Photo of {{teamMember.name}}">
   <div class="card-body text-center">
-    <h5 class="card-title text-uppercase mt-2">{{teamMember.fields.name}}</h5>
+    <h5 class="card-title text-uppercase mt-2">{{teamMember.name}}</h5>
     <markdown>
-      {{teamMember.fields.description}}
+      {{teamMember.description}}
     </markdown>
     <p>
-      <a attr.alt="{{teamMember.fields.name}}'s Facebook"
-         *ngIf="teamMember.fields.facebook"
-         [href]="teamMember.fields.facebook">
+      <a attr.alt="{{teamMember.name}}'s Facebook"
+         *ngIf="teamMember.facebook"
+         [href]="teamMember.facebook">
         <i class="fab fa-facebook-square fa-2x px-2"></i>
         <span class="sr-only">Facebook</span>
       </a>
-      <a attr.alt="{{teamMember.fields.name}}'s Twitter"
-         *ngIf="teamMember.fields.twitter"
-         [href]="teamMember.fields.twitter">
+      <a attr.alt="{{teamMember.name}}'s Twitter"
+         *ngIf="teamMember.twitter"
+         [href]="teamMember.twitter">
         <i class="fab fa-twitter-square fa-2x px-2"></i>
         <span class="sr-only">Twitter</span>
       </a>
-      <a attr.alt="{{teamMember.fields.name}}'s Github"
-         *ngIf="teamMember.fields.github"
-         [href]="teamMember.fields.github">
+      <a attr.alt="{{teamMember.name}}'s Github"
+         *ngIf="teamMember.github"
+         [href]="teamMember.github">
         <i class="fab fa-github-square fa-2x px-2"></i>
         <span class="sr-only">Github</span>
       </a>

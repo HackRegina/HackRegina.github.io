@@ -9,9 +9,12 @@ export class TeamMemberComponent implements OnInit {
 
   @Input() teamMember
 
+  photo
+
   constructor () { }
 
   ngOnInit () {
+    this.photo = `https:${this.teamMember.photo.fields.file.url}`
   }
 
 }
