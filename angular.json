@@ -20,6 +20,7 @@
               "src/assets",
               "src/favicon.ico",
               "src/manifest.json"
+              "404.html"
             ],
             "styles": [
               "src/styles.scss",
@@ -90,6 +91,7 @@
               "src/assets",
               "src/favicon.ico",
               "src/manifest.json"
+              "404.html"
             ]
           }
         },
