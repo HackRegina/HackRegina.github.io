@@ -8,7 +8,6 @@ import { AppComponent } from './app.component'
 import { HomeComponent } from './home/home.component'
 import { ServicesComponent } from './services/services.component'
 import { StoryComponent } from './story/story.component'
-import { ContactComponent } from './contact/contact.component'
 import { SponsorsPageComponent } from './sponsorsPage/sponsorsPage.component'
 import { ContentfulService } from './contentful.service'
 import { SponsorsComponent } from './sponsors/sponsors.component'
@@ -26,7 +25,6 @@ import { JobComponent } from './job/job.component'
 import { CallForPresentersModule } from './call-for-presenters/call-for-presenters.module'
 import { CfpCallbackService } from './cfp-callback.service'
 // import { CalendarModule } from 'ap-angular-fullcalendar'
-import {MomentCalendarComponent} from "./moment-calendar/moment-calendar.component";
 import {FormsModule} from "@angular/forms";
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
@@ -37,7 +35,6 @@ import { FooterComponent } from './footer/footer.component';
     HomeComponent,
     ServicesComponent,
     StoryComponent,
-    ContactComponent,
     SponsorsPageComponent,
     SponsorsComponent,
     SponsorComponent,
@@ -47,7 +44,6 @@ import { FooterComponent } from './footer/footer.component';
     TeamMemberComponent,
     JobsComponent,
     JobComponent,
-    MomentCalendarComponent,
     NavbarComponent,
     FooterComponent
   ],

@@ -44,10 +44,6 @@
 
     var code = getParameterByName('code')
     var state = getParameterByName('state')
-
-    console.log('code: ' + code)
-    console.log('state: ' + state)
-
     if (code && state) {
       window.location = '/#/cfp?code=' + code + '&state=' + state
     }

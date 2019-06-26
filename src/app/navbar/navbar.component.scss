@@ -1,0 +1,22 @@
+@import '../../styles.scss';
+
+.nav-link {
+  color: rgba($primary, 0.75);
+}
+
+.nav-item {
+  margin-right: .5rem !important;
+  margin-left: .5rem !important;
+}
+
+.nav-item.active > .nav-link {
+  color: $primary;
+}
+
+@include media-breakpoint-down(sm) {
+  nav.navbar {
+    background-color: $light;
+  }
+}
+
+

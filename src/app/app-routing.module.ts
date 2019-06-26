@@ -1,14 +1,14 @@
-import { NgModule } from '@angular/core'
-import { Routes, RouterModule } from '@angular/router'
+import { CallForPresentersModule } from './call-for-presenters/call-for-presenters.module';
+import { NgModule } from '@angular/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { HomeComponent } from './home/home.component'
-import { ServicesComponent } from './services/services.component'
-import { SponsorsPageComponent } from './sponsorsPage/sponsorsPage.component'
-import { StoryComponent } from './story/story.component'
-import { ContactComponent } from './contact/contact.component'
-import { EventsPageComponent } from './events-page/events-page.component'
-import { JobsComponent } from './jobs/jobs.component'
-import { JobComponent } from './job/job.component'
+import { HomeComponent } from './home/home.component';
+import { ServicesComponent } from './services/services.component';
+import { SponsorsPageComponent } from './sponsorsPage/sponsorsPage.component';
+import { StoryComponent } from './story/story.component';
+import { EventsPageComponent } from './events-page/events-page.component';
+import { JobsComponent } from './jobs/jobs.component';
+import { JobComponent } from './job/job.component';
 
 const routes: Routes = [
   {
@@ -16,7 +16,6 @@ const routes: Routes = [
     component: HomeComponent
   },
   {
-    
     path: 'services',
     component: ServicesComponent
   },
@@ -27,10 +26,6 @@ const routes: Routes = [
   {
     path: 'story',
     component: StoryComponent
-  },
-  {
-    path: 'contact',
-    component: ContactComponent
   },
   {
     path: 'events',
@@ -46,9 +41,9 @@ const routes: Routes = [
   },
   {
     path: 'cfp',
-    loadChildren: 'app/call-for-presenters/call-for-presenters.module#CallForPresentersModule'
+    loadChildren: () => CallForPresentersModule
   },
-]
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -1,9 +1,8 @@
-<div class="container">
-  <div class="row">
-    <div class="col-12 mt-4">
-      <h3>Speaking at HackRegina Tech Talks</h3>
-    </div>
-    <div class="col-12">
+<div class="container page-container">
+  <div class="row mb-5">
+    <div class="col-8 mx-auto">
+      <h1 class="mt-4">Call for Presenters</h1>
+      <h3 class="mt-4">Speaking at HackRegina Tech Talks</h3>
       <p>
         Would you like to speak at a HackRegina event? We welcome you! Of course, we
         have guidelines that we ask all of our presenters to follow. These guidelines
@@ -11,11 +10,7 @@
         receive value through interaction with our members and that our sponsors are well
         represented.
       </p>
-    </div>
-    <div class="col-12 mt-4">
-      <h3>Speaker Guidelines</h3>
-    </div>
-    <div class="col-12">
+      <h3 class="mt-4">Speaker Guidelines</h3>
       <ol>
         <li>
           You must LOVE tech as much as we do. This is the perfect opportunity to preach to the choir. We are a general
@@ -32,7 +27,7 @@
         <li>
           Attend some of our meetings prior to presenting. This is arguably the best way to get a sense for the
           community you’ll be addressing. If you can’t make it to a meeting, try joining our <a
-          href="https://hackregina.slack.com/messages/coffeecrew/">#coffeecrew</a> channel on
+            href="https://hackregina.slack.com/messages/coffeecrew/">#coffeecrew</a> channel on
           slack where you'll get matched with a new member to meet up with every couple of weeks.
         </li>
         <li>
@@ -44,91 +39,82 @@
           of Q & A, or you can use the entire 45 minutes interactively. Your call!
         </li>
       </ol>
-    </div>
-    <div class="col-12 mt-4">
-      <h3>Typical Tech Talk Agenda</h3>
-    </div>
-    <div class="col-12">
-      Most HackRegina tech talks follow this agenda:
+      <h3 class="mt-4">Typical Tech Talk Agenda</h3>
+      <p>Most HackRegina tech talks follow this agenda:</p>
       <ul>
         <li>[30 minutes] Networking + eating refreshments (if provided).</li>
         <li>[45 minutes] Speaker presentation + Q&A</li>
         <li>[? minutes] Hangout or head to a nearby restaurant/pub for after presentation conversation.</li>
       </ul>
-    </div>
-    <div class="col-12 mt-4">
-      <h3>Submit a Talk</h3>
-    </div>
-
-    <div class="col-8">
-      <form [formGroup]="form" class="needs-validation" novalidate>
-        <div class="form-group">
-          <label for="title">Title</label>
-          <input type="text" class="form-control" id="title" formControlName="title" required>
-          <div class="invalid-feedback">
-            Required.
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="name">Your name</label>
-          <input type="text" class="form-control" id="name" formControlName="name" required>
-          <div class="invalid-feedback">
-            Required.
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="description">A brief description of your talk</label>
-          <textarea rows="6" type="text" class="form-control" id="description" formControlName="description"
+      <h3 class="mt-4">Submit a Talk</h3>
+      <div class="card bg-light">
+        <div class="card-body">
+            <form [formGroup]="form" class="needs-validation" novalidate>
+                <div class="form-group">
+                  <label for="title">Title</label>
+                  <input type="text" class="form-control" id="title" formControlName="title" required>
+                  <div class="invalid-feedback">
+                    Required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="name">Your name</label>
+                  <input type="text" class="form-control" id="name" formControlName="name" required>
+                  <div class="invalid-feedback">
+                    Required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="description">A brief description of your talk</label>
+                  <textarea rows="6" type="text" class="form-control" id="description" formControlName="description"
                     required></textarea>
-          <div class="invalid-feedback">
-            Required.
-          </div>
+                  <div class="invalid-feedback">
+                    Required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="bio">A brief bio about you</label>
+                  <textarea rows="6" type="text" class="form-control" id="bio" formControlName="bio" required></textarea>
+                  <div class="invalid-feedback">
+                    Required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="email">Email address</label>
+                  <input type="email" class="form-control" id="email" formControlName="email" required>
+                  <div class="invalid-feedback">
+                    Required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="twitter">Twitter</label>
+                  <input type="text" class="form-control" id="twitter" formControlName="twitter">
+                </div>
+                <div class="form-group">
+                  <label for="website">Website</label>
+                  <input type="text" class="form-control" id="website" formControlName="website">
+                </div>
+                <div class="form-group">
+                  <label for="github">Github</label>
+                  <input type="text" class="form-control" id="github" formControlName="github">
+                </div>
+                <button class="btn btn-primary" (click)="submit()">Submit</button>
+                <div>
+                  <small class="text-muted">You will be prompted to login with your Github account. We only use this to open an
+                    issue in our CFP repo on your behalf. This is a great way for us to keep track of things, keep in touch with
+                    you and of course, it's free!
+                  </small>
+                </div>
+                <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" *ngIf="err">
+                  Something went wrong. Please see above for more information.
+                </div>
+                <div class="alert alert-success alert-dismissible fade show mt-3" role="alert" *ngIf="url">
+                  Success! We have received your application. You can check on it here: <a [href]="url">{{url}}</a>
+                </div>
+              </form>
         </div>
-        <div class="form-group">
-          <label for="bio">A brief bio about you</label>
-          <textarea rows="6" type="text" class="form-control" id="bio" formControlName="bio" required></textarea>
-          <div class="invalid-feedback">
-            Required.
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" formControlName="email" required>
-          <div class="invalid-feedback">
-            Required.
-          </div>
-        </div>
-        <div class="form-group">
-          <label for="twitter">Twitter</label>
-          <input type="text" class="form-control" id="twitter" formControlName="twitter">
-        </div>
-        <div class="form-group">
-          <label for="website">Website</label>
-          <input type="text" class="form-control" id="website" formControlName="website">
-        </div>
-        <div class="form-group">
-          <label for="github">Github</label>
-          <input type="text" class="form-control" id="github" formControlName="github">
-        </div>
-        <button class="btn btn-primary" (click)="submit()">Submit</button>
-        <div>
-          <small class="text-muted">You will be prompted to login with your Github account. We only use this to open an
-            issue in our CFP repo on your behalf. This is a great way for us to keep track of things, keep in touch with
-            you and of course, it's free!
-          </small>
-        </div>
-        <div class="alert alert-danger alert-dismissible fade show mt-3" role="alert" *ngIf="err">
-          Something went wrong. Please see above for more information.
-        </div>
-        <div class="alert alert-success alert-dismissible fade show mt-3" role="alert" *ngIf="url">
-          Success! We have received your application. You can check on it here: <a [href]="url">{{url}}</a>
-        </div>
-      </form>
-    </div>
-    <div class="col-12 mt-4">
-      <h3>Questions?</h3>
-    </div>
-    <div class="col-12">
+      </div>
+      <h3 class="mt-4">Questions?</h3>
       <p>Hit us up on slack in the <a href="https://hackregina.slack.com/messages/cfp/">#cfp</a> channel. <a
         href="https://join.slack.com/t/hackregina/shared_invite/enQtMzMyNzMzMDY1MzAxLTliMTZlMDFjOTZkZTIwYTdjMTFlMjVjODYzOGIzZTEwYzYyZjRhMTVlZmY2MjE0NGFlZTk3YmMwZDIzZjgwYjY">Not
         a member yet?</a> We look forward to seeing and hearing your presentation!</p>

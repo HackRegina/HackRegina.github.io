@@ -1,27 +1,32 @@
-<div class="container">
+<div class="container page-container" *ngIf="subscription.closed">
   <div class="row">
     <div class="col-12 table-responsive mt-3">
-      <table class="table table-striped table-borderless">
-        <tr>
-          <th>Job</th>
-          <th>Date Posted</th>
-          <th>Labels</th>
-        </tr>
-        <tr *ngFor="let job of jobs" (click)="viewJob(job)" class="hover">
-          <td>{{job.title}}</td>
-          <td>{{job.created_at | date:'longDate'}}</td>
-          <td>
-            <span class="badge badge-pill badge-primary" *ngFor="let label of job.labels">{{label.name}}</span>
-          </td>
-        </tr>
-      </table>
+      <div class="d-flex">
+        <h1 class="mr-auto mt-auto mb-2">Job Board</h1>
+        <div class="ml-auto mt-auto mb-2">
+          <a href="https://github.com/HackRegina/jobs/issues/new" class="btn btn-outline-primary">Post Job to GitHub</a>
+        </div>
+      </div>
+      <div class="card-columns mt-3">
+        <div class="card" *ngFor="let job of jobs">
+          <div class="card-header"></div>
+          <div class="card-body text-center">
+            <h5 class="card-title text-uppercase mt-2">{{job.title}}</h5>
+            <p>{{job.created_at | date:'longDate'}}</p>
+            <p>
+              <span class="badge badge-pill badge-primary" *ngFor="let label of job.labels">{{label.name}}</span>
+            </p>
+            <p>
+              <button class="btn btn-primary btn-block" (click)="viewJob(job)">View Posting</button>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="col-12 mb-3">
-      <a href="https://github.com/HackRegina/jobs/issues/new">
-        <button class="btn btn-primary">Post Job to GitHub</button>
-      </a>
-    </div>
+</div>
+<div class="container page-container" *ngIf="!subscription.closed">
+  <div class="d-flex my-5">
+    <i class="fal fa-spinner fa-pulse fa-5x my-5 mx-auto"></i>
   </div>
 </div>
