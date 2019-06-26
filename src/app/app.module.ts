@@ -28,6 +28,8 @@ import { CfpCallbackService } from './cfp-callback.service'
 // import { CalendarModule } from 'ap-angular-fullcalendar'
 import {MomentCalendarComponent} from "./moment-calendar/moment-calendar.component";
 import {FormsModule} from "@angular/forms";
+import { NavbarComponent } from './navbar/navbar.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import {FormsModule} from "@angular/forms";
     TeamMemberComponent,
     JobsComponent,
     JobComponent,
-    MomentCalendarComponent
+    MomentCalendarComponent,
+    NavbarComponent,
+    FooterComponent
   ],
   imports: [
     FormsModule,

@@ -1,0 +1,42 @@
+<nav class="navbar navbar-expand-lg fixed-top" [class.navbar-transparent]="!navbarVisible"
+  [class.bg-light]="navbarVisible">
+  <div class="container">
+    <a class="navbar-brand" href="#">
+      <img src="/assets/imgs/hackregina-logo.png" height="50" class="d-inline-block align-top" alt="HackRegina">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapsse"
+      aria-controls="navbarCollapsse" aria-expanded="false" aria-label="Toggle navigation">
+      <i class="fa fa-bars"></i>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarCollapsse">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/events">Calendar</a>
+        </li>
+        <!--<li class="nav-item" routerLinkActive="active">-->
+        <!--<a class="nav-link" routerLink="/services">Services</a>-->
+        <!--</li>-->
+        <!--<li class="nav-item" routerLinkActive="active">-->
+        <!--<a class="nav-link" routerLink="/sponsors">Sponsors</a>-->
+        <!--</li>-->
+        <!--<li class="nav-item" routerLinkActive="active">-->
+        <!--<a class="nav-link" routerLink="/story">Our Story</a>-->
+        <!--</li>-->
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" href="https://hackregina.github.io/techmap/#/">Tech Map</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/jobs">Job Board</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a class="nav-link" routerLink="/cfp">CFP</a>
+        </li>
+        <li class="nav-item" routerLinkActive="active">
+          <a href="http://joinslack.hackregina.com" target="_blank" class="btn btn-primary mx-2">
+            <i class="fab fa-slack-hash mr-2"></i> Join Slack
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>

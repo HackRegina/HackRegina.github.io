@@ -1,50 +1,61 @@
-<div class="jumbotron jumbotron-fluid bg-stock-img bg-stock-img1 py-5">
-  <div class="container text-center py-5">
+<div class="page-header jumbotron jumbotron-fluid bg-stock-img bg-stock-img1 d-flex py-5">
+  <div class="container text-center my-auto">
     <img src="/assets/imgs/hackregina-logo.svg" alt="HackRegina" class="img-fluid w-75 mb-5">
-    <p class="lead">Growing and sustaining the Regina tech community.</p>
+    <h1 class="lead">Growing and sustaining the Regina tech community.</h1>
   </div>
 </div>
 <div class="container">
   <div class="row mb-5">
     <div class="col mx-5">
       <div class="card-deck card-overlap text-primary">
-        <div class="card text-center" data-aos="fade-up">
-          <div class="card-body">
-            <i class="fas fa-calendar fa-3x m-2"></i>
-            <h5 class="card-title text-uppercase">Events</h5>
-            <p class="card-text">Code together nights, hackathons and educational talks from tech leaders in Regina.</p>
+        <div class="card text-center" data-aos="fade-up" [style.min-height]="'300px'">
+          <div class="card-body d-flex">
+            <div class="my-auto">
+              <i class="fas fa-calendar fa-3x m-2"></i>
+              <h5 class="card-title text-uppercase">Events</h5>
+              <p class="card-text">Code together nights, hackathons and educational talks from tech leaders in Regina.</p>
+            </div>
           </div>
         </div>
-        <div class="card text-center" data-aos="fade-up">
-          <div class="card-body">
-            <i class="fab fa-slack fa-3x m-2"></i>
-            <h5 class="card-title text-uppercase">Slack</h5>
-            <p class="card-text">Talk tech, meet people, get help, learn something new. Join the discussion on Slack
-              below!</p>
+        <div class="card text-center" data-aos="fade-up" [style.min-height]="'300px'">
+          <div class="card-body d-flex">
+            <div class="my-auto">
+              <i class="fab fa-slack fa-3x m-2"></i>
+              <h5 class="card-title text-uppercase">Slack</h5>
+              <p class="card-text">
+                Talk tech, meet people, get help, learn something new. Join the discussion on Slack below!
+              </p>
+            </div>
           </div>
         </div>
-        <div class="card text-center" data-aos="fade-up">
-          <div class="card-body">
-            <i class="fas fa-handshake fa-3x m-2"></i>
-            <h5 class="card-title text-uppercase">Community</h5>
-            <p class="card-text">A network of Regina tech companies to share knowledge and help Regina stay ahead of the
-              latest technologies.</p>
+        <div class="card text-center" data-aos="fade-up" [style.min-height]="'300px'">
+          <div class="card-body d-flex">
+            <div class="my-auto">
+              <i class="fas fa-handshake fa-3x m-2"></i>
+              <h5 class="card-title text-uppercase">Community</h5>
+              <p class="card-text">
+                A network of Regina tech companies to share knowledge and help Regina stay ahead of the latest technologies.
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
   <div class="container py-5">
-    <h2 class="text-center text-uppercase">Discover the Innovation in Regina</h2>
     <div class="row my-5">
-      <div class="col mx-5 text-center">
+      <div class="col text-center">
+        <h2 class="text-center text-uppercase">Discover the Innovation in Regina</h2>
         Breaking down the silos of technology ventures is how we hope to help grow a strong community that can support
         each other. Our goal is to assist individuals' growth by providing opportunities to collaborate, learn, and grow
         together. We aim to have a consistent amount of meetups throughout the year for those with busy schedules. Our
         membership is open to the public to encourage those new to learning to code and support them through their journey.
         <p class="my-3">
-          <a href="http://eepurl.com/gcYiO1" target="_blank" class="btn btn-primary btn-lg">Subscribe to our Mailing List</a>
+          <a href="http://eepurl.com/gcYiO1" target="_blank" class="btn btn-primary btn-lg">Subscribe to Updates <i class="fa fa-paper-plane ml-2"></i></a>
         </p>
+      </div>
+      <div class="col d-none d-md-block">
+        <img class="img-fluid" src="./assets/imgs/undraw_work_chat_erdt.svg" />
       </div>
     </div>
   </div>
@@ -58,13 +69,16 @@
   <app-sponsors></app-sponsors>
 </div>
 <div class="container py-5">
-  <h3 class="text-center text-uppercase">Organizations that Support Our Growth</h3>
   <div class="row m-5">
-    <div class="col-md-7">
-      Nothing of what we aim to accomplish could be possible without the amazing support that we receive from our sponsors.
-      Our sponsors help support our community through hosting events, providing services, and other opportunities.
+    <div class="col-md-6 d-none d-md-block">
+      <img class="img-fluid" src="./assets/imgs/undraw_goals_w8tw.svg" />
     </div>
-    <div class="col-md-5 text-right">
+    <div class="col-md-6 text-center">
+      <h3 class="text-uppercase">Organizations that Support Our Growth</h3>
+      <p>
+        Nothing of what we aim to accomplish could be possible without the amazing support that we receive from our sponsors.
+        Our sponsors help support our community through hosting events, providing services, and other opportunities.
+      </p>
       <a href="./assets/2018 Sponsorship Package.pdf">
         <button class="btn btn-lg btn-primary">Become a Sponsor</button>
       </a>
