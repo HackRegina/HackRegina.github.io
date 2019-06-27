@@ -1,7 +1,7 @@
 language: node_js
 
 node_js:
-   - node # will use latest node
+   - "11"
 
 cache: yarn
 
