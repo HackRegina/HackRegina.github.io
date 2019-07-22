@@ -25,9 +25,10 @@ import { JobComponent } from './job/job.component'
 import { CallForPresentersModule } from './call-for-presenters/call-for-presenters.module'
 import { CfpCallbackService } from './cfp-callback.service'
 // import { CalendarModule } from 'ap-angular-fullcalendar'
-import {FormsModule} from "@angular/forms";
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import {JobFilterComponent} from "./job-filter/job-filter.component";
 
 @NgModule({
   declarations: [
@@ -45,10 +46,12 @@ import { FooterComponent } from './footer/footer.component';
     JobsComponent,
     JobComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    JobFilterComponent
   ],
   imports: [
     FormsModule,
+    ReactiveFormsModule,
     BrowserModule,
     HttpClientModule,
     AppRoutingModule,

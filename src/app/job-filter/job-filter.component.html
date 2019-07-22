@@ -1,0 +1,24 @@
+<div class="d-flex" [formGroup]="formGroup">
+  <input type="text" class="form-control mr-1" formControlName="titleFilter" placeholder="Search title">
+  <div class="dropdown mx-1">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+      Sort By
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" (click)="setSortBy(jobSortType.CREATED_DATE_ASC, $event.target)">Newest</a>
+      <a class="dropdown-item" (click)="setSortBy(jobSortType.CREATED_DATE_DESC, $event.target)">Oldest</a>
+      <a class="dropdown-item" (click)="setSortBy(jobSortType.TITLE_ASC, $event.target)">Title (A-Z)</a>
+      <a class="dropdown-item" (click)="setSortBy(jobSortType.TITLE_DESC, $event.target)">Title (Z-A)</a>
+    </div>
+  </div>
+  <div class="dropdown ml-1" *ngIf="labels.length > 0">
+    <button class="btn btn-outline-secondary dropdown-toggle" type="button" data-toggle="dropdown">
+      Labels
+    </button>
+    <div class="dropdown-menu">
+      <a class="dropdown-item" *ngFor="let label of labels" (click)="addLabel(label, $event.target)">
+        {{label.name | titlecase}}
+      </a>
+    </div>
+  </div>
+</div>
