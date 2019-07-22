@@ -1,4 +1,4 @@
-class Label {
+export class Label {
   name: string
 }
 

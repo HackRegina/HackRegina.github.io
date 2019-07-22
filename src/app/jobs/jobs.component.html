@@ -1,4 +1,4 @@
-<div class="container page-container" *ngIf="subscription.closed">
+<div class="container page-container" *ngIf="jobSubscription.closed">
   <div class="row">
     <div class="col-12 table-responsive mt-3">
       <div class="d-flex">
@@ -7,25 +7,31 @@
           <a href="https://github.com/HackRegina/jobs/issues/new" class="btn btn-outline-primary">Post Job to GitHub</a>
         </div>
       </div>
-      <div class="card-columns mt-3">
-        <div class="card" *ngFor="let job of jobs">
-          <div class="card-header"></div>
-          <div class="card-body text-center">
-            <h5 class="card-title text-uppercase mt-2">{{job.title}}</h5>
-            <p>{{job.created_at | date:'longDate'}}</p>
-            <p>
-              <span class="badge badge-pill badge-primary" *ngFor="let label of job.labels">{{label.name}}</span>
-            </p>
-            <p>
-              <button class="btn btn-primary btn-block" (click)="viewJob(job)">View Posting</button>
-            </p>
+      <hr class="mb-4">
+      <div class="ml-auto mt-auto mb-2">
+        <app-job-filter [formGroup]="jobFilterFormGroup" [labels]="labels"></app-job-filter>
+      </div>
+      <div class="row my-3">
+        <div class="col-md-4 p-1" *ngFor="let job of filteredJobs">
+          <div class="card">
+            <div class="card-header"></div>
+            <div class="card-body text-center">
+              <h5 class="card-title text-uppercase mt-2">{{job.title}}</h5>
+              <p>{{job.created_at | date:'longDate'}}</p>
+              <p>
+                <span class="badge badge-pill badge-primary" *ngFor="let label of job.labels">{{label.name}}</span>
+              </p>
+              <p>
+                <button class="btn btn-primary btn-block" (click)="viewJob(job)">View Posting</button>
+              </p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </div>
 </div>
-<div class="container page-container" *ngIf="!subscription.closed">
+<div class="container page-container" *ngIf="!jobSubscription.closed">
   <div class="d-flex my-5">
     <i class="fal fa-spinner fa-pulse fa-5x my-5 mx-auto"></i>
   </div>

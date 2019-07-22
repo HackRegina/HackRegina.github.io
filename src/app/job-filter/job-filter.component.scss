@@ -1,0 +1,7 @@
+.selected-item:before {
+  content: '\2713  ';
+}
+
+.dropdown-item:not(.selected-item) {
+  padding-left: 2.5rem;
+}
