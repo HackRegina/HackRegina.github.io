@@ -1,9 +1,10 @@
 <ng-container *ngFor="let level of sponsorshipLevels">
   <h3 class="text-center text-uppercase">{{level?.fields?.level}} Sponsors</h3>
   <div class="row m-5">
-    <app-sponsor *ngFor="let sponsor of sponsors | sponsorshipLevel:level"
+    <app-sponsor class="col-12 col-md-6 my-3 mx-auto"
+                 *ngFor="let sponsor of sponsors | sponsorshipLevel:level"
                  [sponsor]="sponsor.fields"></app-sponsor>
-    <div class="col-4 mx-auto text-center" *ngIf="(sponsors | sponsorshipLevel:level)?.length === 0">
+    <div class="col-4 mx-auto text-center text-muted" *ngIf="(sponsors | sponsorshipLevel:level)?.length === 0">
       There are currently no {{level?.fields?.level}} sponsors.
     </div>
   </div>

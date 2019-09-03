@@ -1,9 +1,32 @@
-<div class="col-12 col-md-6 my-3 mx-auto text-center" data-aos="fade-up">
-  <a [href]="sponsor.url">
-    <img class="card-img-top" [src]="logo" alt="{{sponsor.name}}">
-  </a>
-  <br/><br/>
-  <markdown>
-    {{sponsor.description}}
-  </markdown>
+<div class="card" style="height: 100%">
+  <div class="card-header d-flex">
+    <a class="my-auto w-100" [href]="sponsor?.url">
+      <img class="img-fluid w-100" [src]="logo" alt="{{sponsor.name}}">
+    </a>
+  </div>
+  <div class="card-body text-center">
+    <div Markdown>
+      {{sponsor.description}}
+    </div>
+    <p>
+      <a attr.alt="{{sponsor.name}}'s Facebook"
+         *ngIf="sponsor.facebook"
+         [href]="sponsor.facebook">
+        <i class="fab fa-facebook-square fa-2x px-2"></i>
+        <span class="sr-only">Facebook</span>
+      </a>
+      <a attr.alt="{{sponsor.name}}'s Twitter"
+         *ngIf="sponsor.twitter"
+         [href]="sponsor.twitter">
+        <i class="fab fa-twitter-square fa-2x px-2"></i>
+        <span class="sr-only">Twitter</span>
+      </a>
+      <a attr.alt="{{sponsor.name}}'s Github"
+         *ngIf="sponsor.github"
+         [href]="sponsor.github">
+        <i class="fab fa-github-square fa-2x px-2"></i>
+        <span class="sr-only">Github</span>
+      </a>
+    </p>
+  </div>
 </div>

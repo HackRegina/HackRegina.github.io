@@ -28,6 +28,8 @@ import { CfpCallbackService } from './cfp-callback.service';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
+import { PartnersComponent } from './partners/partners.component';
+import { PartnerComponent } from './partner/partner.component';
 
 @NgModule({
   declarations: [
@@ -45,7 +47,9 @@ import { FooterComponent } from './footer/footer.component';
     JobsComponent,
     JobComponent,
     NavbarComponent,
-    FooterComponent
+    FooterComponent,
+    PartnersComponent,
+    PartnerComponent
   ],
   imports: [
     FormsModule,

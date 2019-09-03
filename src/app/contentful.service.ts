@@ -26,6 +26,10 @@ export class ContentfulService {
     return from(this.client.getEntries({'content_type': 'sponsors'})).pipe(map(ContentfulService.mapToEntries));
   }
 
+  getPartners (): Observable<any> {
+    return from(this.client.getEntries({'content_type': 'partners'})).pipe(map(ContentfulService.mapToEntries));
+  }
+
   getEvents (): Observable<any> {
     return from(this.client.getEntries({'content_type': 'event'})).pipe(map(ContentfulService.mapToEntries));
   }

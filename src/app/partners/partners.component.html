@@ -1,0 +1,7 @@
+<div class="row m-5">
+  <app-partner class="col-12 col-md-4 my-3 mx-auto" *ngFor="let partner of partners"
+               [partner]="partner.fields"></app-partner>
+  <div class="col-4 mx-auto text-center text-muted" *ngIf="partners?.length === 0">
+    There are currently no partners.
+  </div>
+</div>
