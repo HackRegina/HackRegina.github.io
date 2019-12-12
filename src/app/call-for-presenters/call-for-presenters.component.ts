@@ -92,7 +92,7 @@ export class CallForPresentersComponent implements OnInit {
     if (this.form.valid) {
       let val = this.form.value
 
-      ;(<any>window).location = `https://github.com/login/oauth/authorize?client_id=b2d2249d42691fffb3a8&state=${JSON.stringify(val)}&scope=public_repo`
+      ;(<any>window).location = `https://github.com/login/oauth/authorize?client_id=b2d2249d42691fffb3a8&state=${JSON.stringify(val)}&scope=user:email`
     } else {
       this.err = true
     }
