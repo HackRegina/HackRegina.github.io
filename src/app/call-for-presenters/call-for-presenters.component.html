@@ -2,101 +2,137 @@
   <div class="row mb-5">
     <div class="col-8 mx-auto">
       <h1 class="mt-4">Call for Presenters</h1>
-      <h3 class="mt-4">Speaking at HackRegina Tech Talks</h3>
+      <h3 class="mt-4">Speaking at HackRegina Events</h3>
       <p>
-        Would you like to speak at a HackRegina event? We welcome you! Of course, we
-        have guidelines that we ask all of our presenters to follow. These guidelines
-        ensure that our members receive value from every presentation, that the speakers
-        receive value through interaction with our members and that our sponsors are well
-        represented.
+        Would you like to speak at a HackRegina event? We welcome you! Of course, we have guidelines that we ask all of our presenters to follow. These guidelines ensure that our members receive value from every presentation, that the speakers receive value through interaction with our members and that our sponsors are well represented.
       </p>
       <h3 class="mt-4">Speaker Guidelines</h3>
       <ol>
         <li>
-          You must LOVE tech as much as we do. This is the perfect opportunity to preach to the choir. We are a general
-          tech community and welcome talks on a broad range of topics from deep dives in to a specific tech, to
-          experiences with a new language or framework, to startup life and culture.
+          You must LOVE tech as much as we do. This is the perfect opportunity to preach to the choir. We are a general tech community and welcome talks on a broad range of topics from deep dives in to a specific tech, to experiences with a new language or framework, to startup life and culture.
         </li>
         <li>
-          No sales pitches. HackRegina is an informal group of professionals who get together every month because we
-          want to, not as part of our jobs or career development. The meeting is definitely not meant as a means to be
-          sold new products. So leave the sell sheets and the brochures at the office. Don’t call us, we’ll call you.
-          Focus on making a good impression on a human level, rather than on a product level. Chances are, if we like
-          you as a person, we’ll be more inclined to check out your product.
+          No sales pitches please. HackRegina is an informal group of professionals who get together every month because we want to, not as part of our jobs or career development. The meeting is definitely not meant as a means to be sold new products.
         </li>
         <li>
-          Attend some of our meetings prior to presenting. This is arguably the best way to get a sense for the
-          community you’ll be addressing. If you can’t make it to a meeting, try joining our <a
-            href="https://hackregina.slack.com/messages/coffeecrew/">#coffeecrew</a> channel on
-          slack where you'll get matched with a new member to meet up with every couple of weeks.
+          Attend some of our <a routerLink="/events">meetups</a> prior to presenting. This is arguably the best way to get a sense for the  community you’ll be addressing. If you can’t make it to a meetup, try joining the <a href="http://joinslack.hackregina.com">HackRegina Slack</a>.
         </li>
         <li>
-          We record many of our presentations on video. Videos are shared on the web. You’re welcome to use the video on
-          your own blog or web site.
-        </li>
-        <li>
-          Presentations last for <strong>45 minutes</strong>. You can do 30 minutes of speaking followed by 15 minutes
-          of Q & A, or you can use the entire 45 minutes interactively. Your call!
+          We would like to record as many of our presentations on video if possible. You’re welcome to use the video on your own blog or web site.
         </li>
       </ol>
-      <h3 class="mt-4">Typical Tech Talk Agenda</h3>
-      <p>Most HackRegina tech talks follow this agenda:</p>
+      <h3 class="mt-4">Typical Presentation Formats</h3>
+      <h4>Tech Talk</h4>
+      <p>Tech talks are meant for the community to share their knowledge to help Regina stay ahead of new and popular technologies for developing applications, software solutions and developing new skills.</p>
+      <p>Agenda:</p>
       <ul>
         <li>[30 minutes] Networking + eating refreshments (if provided).</li>
         <li>[45 minutes] Speaker presentation + Q&A</li>
         <li>[? minutes] Hangout or head to a nearby restaurant/pub for after presentation conversation.</li>
+      </ul>
+      <h4>Workshop</h4>
+      <p>Presented by developers for developers to provide hands on experience with new technologies to help assist with the continuous professional growth demanded by our industry.</p>
+      <p>Agenda:</p>
+      <ul>
+        <li>[15 minutes] Networking + eating refreshments (if provided).</li>
+        <li>[1.5+ hours] Speaker + Workshop + Q&A</li>
+      </ul>
+      <h4>Round Table Discussion</h4>
+      <p>Usual held at lunch, attendees participate in a round table discussion with other experts to share past experiences on more advanced topics. The moderator/host should prepare some talking points on what you think is best practices and any (good or bad) experiences. We aim to connect companies to help each other by recommending any tips or strategies.</p>
+      <p>Agenda:</p>
+      <ul>
+        <li>[15 minutes] Networking + eating refreshments (if provided).</li>
+        <li>[45 - 60 minutes] Round Table Discussion</li>
       </ul>
       <h3 class="mt-4">Submit a Talk</h3>
       <div class="card bg-light">
         <div class="card-body">
             <form [formGroup]="form" class="needs-validation" novalidate>
                 <div class="form-group">
-                  <label for="title">Title</label>
-                  <input type="text" class="form-control" id="title" formControlName="title" required>
+                  <label for="title" class="required">Title</label>
+                  <input type="text" class="form-control" id="title" formControlName="title"
+                         [class.is-invalid]="(form.get('title').touched || form.get('title').dirty) && form.get('title').invalid" required>
                   <div class="invalid-feedback">
                     Required.
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="name">Your name</label>
-                  <input type="text" class="form-control" id="name" formControlName="name" required>
+                  <label for="title" class="required">Format</label>
+                  <select class="form-control" id="format" formControlName="format"
+                         [class.is-invalid]="(form.get('format').touched || form.get('format').dirty) && form.get('format').invalid" required>
+                    <option value="">Select a format</option>
+                    <option value="Tech Talk">Tech Talk</option>
+                    <option value="Workshop">Workshop</option>
+                    <option value="Round Table">Round Table</option>
+                  </select>
                   <div class="invalid-feedback">
                     Required.
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="description">A brief description of your talk</label>
+                  <label for="name" class="required">Your name</label>
+                  <input type="text" class="form-control" id="name" formControlName="name"
+                         [class.is-invalid]="(form.get('name').touched || form.get('name').dirty) && form.get('name').invalid" required>
+                  <div class="invalid-feedback">
+                    Required.
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label for="description" class="required">A brief description of your talk</label>
                   <textarea rows="6" type="text" class="form-control" id="description" formControlName="description"
-                    required></textarea>
+                         [class.is-invalid]="(form.get('description').touched || form.get('description').dirty) && form.get('description').invalid" required></textarea>
                   <div class="invalid-feedback">
                     Required.
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="bio">A brief bio about you</label>
-                  <textarea rows="6" type="text" class="form-control" id="bio" formControlName="bio" required></textarea>
+                  <label for="description" class="required">Prerequisites</label>
+                  <textarea rows="3" type="text" class="form-control" id="prerequisites" formControlName="prerequisites"
+                         [class.is-invalid]="(form.get('prerequisites').touched || form.get('prerequisites').dirty) && form.get('prerequisites').invalid" required></textarea>
+                  <small class="form-text">Should people bring their laptop? Should they have experience with something? Should they install something before coming?</small>
+                </div>
+                <div class="form-group">
+                  <label for="bio" class="required">A brief bio about you</label>
+                  <textarea rows="6" type="text" class="form-control" id="bio" formControlName="bio"
+                         [class.is-invalid]="(form.get('bio').touched || form.get('bio').dirty) && form.get('bio').invalid" required></textarea>
                   <div class="invalid-feedback">
                     Required.
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="email">Email address</label>
-                  <input type="email" class="form-control" id="email" formControlName="email" required>
+                  <label for="email" class="required">Email address</label>
+                  <input type="email" class="form-control" id="email" formControlName="email"
+                         [class.is-invalid]="(form.get('email').touched || form.get('email').dirty) && form.get('email').invalid" required>
                   <div class="invalid-feedback">
                     Required.
                   </div>
                 </div>
                 <div class="form-group">
-                  <label for="twitter">Twitter</label>
-                  <input type="text" class="form-control" id="twitter" formControlName="twitter">
+                  <label for="twitter" class="m-0">Twitter</label>
+                  <small class="text-muted form-text mb-2">https://www.twitter.com/&lt;username&gt;</small>
+                  <input type="url" class="form-control" id="twitter" formControlName="twitter"
+                         [class.is-invalid]="(form.get('twitter').touched || form.get('twitter').dirty) && form.get('twitter').invalid">
+                  <div class="invalid-feedback">
+                    Invalid Twitter Url.
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="website">Website</label>
-                  <input type="text" class="form-control" id="website" formControlName="website">
+                  <label for="website" class="m-0">Website</label>
+                  <small class="text-muted form-text mb-2">https://www.website.com</small>
+                  <input type="url" class="form-control" id="website" formControlName="website"
+                         [class.is-invalid]="(form.get('website').touched || form.get('website').dirty) && form.get('website').invalid">
+                  <div class="invalid-feedback">
+                    Invalid Url.
+                  </div>
                 </div>
                 <div class="form-group">
-                  <label for="github">Github</label>
-                  <input type="text" class="form-control" id="github" formControlName="github">
+                  <label for="github" class="m-0">Github</label>
+                  <small class="text-muted form-text mb-2">https://www.github.com/&lt;username&gt;</small>
+                  <input type="url" class="form-control" id="github" formControlName="github"
+                         [class.is-invalid]="(form.get('github').touched || form.get('github').dirty) && form.get('github').invalid">
+                  <div class="invalid-feedback">
+                    Invalid Github Url.
+                  </div>
                 </div>
                 <button class="btn btn-primary" (click)="submit()">Submit</button>
                 <div>
@@ -115,9 +151,10 @@
         </div>
       </div>
       <h3 class="mt-4">Questions?</h3>
-      <p>Hit us up on slack in the <a href="https://hackregina.slack.com/messages/cfp/">#cfp</a> channel. <a
-        href="https://join.slack.com/t/hackregina/shared_invite/enQtMzMyNzMzMDY1MzAxLTliMTZlMDFjOTZkZTIwYTdjMTFlMjVjODYzOGIzZTEwYzYyZjRhMTVlZmY2MjE0NGFlZTk3YmMwZDIzZjgwYjY">Not
-        a member yet?</a> We look forward to seeing and hearing your presentation!</p>
+      <p>
+        Hit us up on slack in the <a href="https://hackregina.slack.com/messages/cfp/">#cfp</a> channel.
+        <a href="http://joinslack.hackregina.com">Not a member yet?</a> We look forward to seeing and hearing your presentation!
+      </p>
     </div>
   </div>
 </div>

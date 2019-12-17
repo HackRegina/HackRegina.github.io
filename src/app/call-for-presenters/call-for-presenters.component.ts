@@ -1,13 +1,14 @@
-import { Component, OnInit } from '@angular/core'
-import { FormBuilder, FormGroup, Validators } from '@angular/forms'
-import { HttpClient, HttpHeaders } from '@angular/common/http'
-import { ActivatedRoute } from '@angular/router'
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
-let issueTemplate = `# {title}
+const issueTemplate = `# {title} - {format}
 ## {name}
 
 ### Description
 {description}
+
+### Prerequisites
+{prerequisites}
 
 ### Bio
 {bio}
@@ -16,7 +17,7 @@ let issueTemplate = `# {title}
 Twitter: {twitter}
 Website: {website}
 Github: {github}
-Email: {email}`
+Email: {email}`;
 
 @Component({
   selector: 'app-call-for-presenters',
@@ -25,76 +26,55 @@ Email: {email}`
 })
 export class CallForPresentersComponent implements OnInit {
 
-  form: FormGroup
-  err: boolean
-  url: string
+  form: FormGroup;
+  err: boolean;
+  url: string;
+  twitterUrlRegex = /http(?:s)?:\/\/(?:www\.)?twitter\.com\/([a-zA-Z0-9_]+)/;
+  websiteUrlRegex = /[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/;
+  githubUrlRegex = /http(?:s)?:\/\/(?:www\.)?github\.com\/([a-zA-Z0-9_]+)/;
 
-  constructor (private fb: FormBuilder, private http: HttpClient, private route: ActivatedRoute) { }
+  constructor (private fb: FormBuilder) { }
 
   ngOnInit () {
-
     this.form = this.fb.group({
       'title': ['', Validators.required],
+      'format': ['', Validators.required],
       'name': ['', Validators.required],
       'description': ['', Validators.required],
+      'prerequisites': ['', Validators.required],
       'bio': ['', Validators.required],
-      'twitter': '',
-      'website': '',
-      'github': '',
+      'twitter': ['', Validators.pattern(this.twitterUrlRegex)],
+      'website': ['', Validators.pattern(this.websiteUrlRegex)],
+      'github': ['', Validators.pattern(this.githubUrlRegex)],
       'email': ['', Validators.required]
-    })
-
-    let state = this.route.snapshot.queryParams.state
-    let code = this.route.snapshot.queryParams.code
-
-    if (state && code) {
-      state = JSON.parse(state)
-      this.form.patchValue(state)
-      this.http.post('https://j6jcwrrbbi.execute-api.us-east-1.amazonaws.com/default/hackregina_github_oauth', {
-        code,
-        state
-      }).subscribe(res => {
-          debugger
-          const httpOptions = {
-            headers: new HttpHeaders({
-              'Content-Type': 'application/json',
-              'Authorization': `token ${(<any>res).access_token}`
-            })
-          }
-
-          this.http.post(`https://api.github.com/repos/HackRegina/cfp/issues`, {
-            title: `${state.name} - ${state.title}`,
-            body: this.getTemplate(issueTemplate)
-          }, httpOptions)
-            .subscribe(res => {
-                this.url = (<any>res).html_url
-              }, () => this.err = true
-            )
-        }, () => this.err = true
-      )
-    }
+    });
   }
 
   getTemplate(state) {
     return issueTemplate.replace('{title}', state.title)
+      .replace('{format}', state.format)
       .replace('{name}', state.name)
       .replace('{description}', state.description)
+      .replace('{prerequisites}', state.prerequisites)
       .replace('{bio}', state.bio)
       .replace('{twitter}', state.twitter)
       .replace('{website}', state.website)
       .replace('{github}', state.github)
-      .replace('{email}', state.email)
+      .replace('{email}', state.email);
   }
 
   submit () {
-    Object.keys(this.form.controls).forEach(key => this.form.controls[key].markAsDirty())
+    Object.keys(this.form.controls).forEach(key => this.form.controls[key].markAsDirty());
 
     if (this.form.valid) {
-      let val = this.form.value
-
-      ;(<any>window).location = `https://github.com/login/oauth/authorize?client_id=b2d2249d42691fffb3a8&state=${JSON.stringify(val)}&scope=user:email`
+      const val = this.form.value;
+      const titleEncoded = encodeURIComponent(`${val.name} - ${val.title}`);
+      const bodyEncoded = encodeURIComponent(this.getTemplate(val));
+      const labelsEncoded = encodeURIComponent(val.format);
+      window.location.href = `https://github.com/HackRegina/cfp/issues/new` +
+        `?title=${titleEncoded}&body=${bodyEncoded}&labels=${labelsEncoded}`;
     } else {
-      this.err = true
+      this.err = true;
     }
 
   }
