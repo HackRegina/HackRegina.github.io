@@ -1,4 +1,4 @@
-import { ContentfulService } from './../contentful.service'
+import { ContentfulService } from '../services/contentful.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({

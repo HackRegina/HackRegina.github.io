@@ -1,9 +1,9 @@
-import { Component, OnInit } from '@angular/core'
-import { JobsService } from '../jobs.service'
-import { Job } from '../job'
+import { Component, OnInit } from '@angular/core';
+import { JobsService } from '../services/jobs.service';
+import Job from '../models/job';
 
-import * as marked from 'marked'
-import { ActivatedRoute } from '@angular/router'
+import * as marked from 'marked';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-job',
@@ -12,19 +12,19 @@ import { ActivatedRoute } from '@angular/router'
 })
 export class JobComponent implements OnInit {
 
-  job: Job
-  body
+  job: Job;
+  body: any;
 
   constructor (private jobService: JobsService, private route: ActivatedRoute) { }
 
   ngOnInit () {
     this.route.params.subscribe(params => {
-      let jobId = +params['jobId'] // (+) converts string 'id' to a number
+      const jobId = +params['jobId'];
       this.jobService.getJob(jobId).subscribe(job => {
-        this.job = job
-        this.body = marked(this.job.body)
-      })
-    })
+        this.job = job;
+        this.body = marked(this.job.body);
+      });
+    });
   }
 
 }

@@ -18,6 +18,10 @@ export class ContentfulService {
     });
   }
 
+  private static mapToEntries (response) {
+    return response.items;
+  }
+
   getSponsorshipLevels (): Observable<any> {
     return from(this.client.getEntries({'content_type': 'sponsorshipLevels'})).pipe(map(ContentfulService.mapToEntries));
   }
@@ -36,10 +40,6 @@ export class ContentfulService {
 
   getTeamMembers (): Observable<any> {
     return from(this.client.getEntries({'content_type': 'teamMember'})).pipe(map(ContentfulService.mapToEntries));
-  }
-
-  private static mapToEntries (response) {
-    return response.items;
   }
 
 }

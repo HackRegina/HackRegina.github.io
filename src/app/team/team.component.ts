@@ -1,5 +1,5 @@
-import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit, Renderer2 } from '@angular/core'
-import { ContentfulService } from '../contentful.service'
+import { Component, OnInit, ViewChildren, QueryList, ElementRef, AfterViewInit, Renderer2 } from '@angular/core';
+import { ContentfulService } from '../services/contentful.service';
 
 @Component({
   selector: 'app-team',

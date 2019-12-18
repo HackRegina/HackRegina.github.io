@@ -1,6 +1,5 @@
-import { Component, OnInit, ViewChild } from '@angular/core'
-import { ContentfulService } from '../contentful.service'
-import * as moment from 'moment'
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { ContentfulService } from '../services/contentful.service';
 
 @Component({
   selector: 'app-events-page',
@@ -9,7 +8,7 @@ import * as moment from 'moment'
 })
 export class EventsPageComponent implements OnInit {
 
-  events: any[] = []
+  events: any[] = [];
 
   constructor (private contentful: ContentfulService) {}
 

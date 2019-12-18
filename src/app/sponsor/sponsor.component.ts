@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core'
-import { ContentfulService } from '../contentful.service'
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-sponsor',
@@ -8,14 +7,14 @@ import { ContentfulService } from '../contentful.service'
 })
 export class SponsorComponent implements OnInit {
 
-  @Input() sponsor
+  @Input() sponsor;
 
-  logo
+  logo;
 
   constructor () { }
 
   ngOnInit () {
-    this.logo = `https:${this.sponsor.logo.fields.file.url}`
+    this.logo = `https:${this.sponsor.logo.fields.file.url}`;
   }
 
 }
