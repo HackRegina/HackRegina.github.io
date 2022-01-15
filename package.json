@@ -25,7 +25,7 @@
     "contentful": "^6.1.1",
     "core-js": "^2.4.1",
     "jquery": "^3.4.1",
-    "marked": "0.7.0",
+    "marked": "4.0.10",
     "moment": "^2.22.2",
     "ngx-md": "^8.0.0",
     "popper.js": "^1.14.1",
